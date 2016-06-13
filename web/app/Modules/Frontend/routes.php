@@ -19,6 +19,12 @@ Route::group(['middleware' => ['web'], 'module' => 'Frontend', 'namespace' => 'A
             return view('welcome', ['content'=> PHP_EOL.\Illuminate\Foundation\Inspiring::quote().PHP_EOL]);
         });
 
+        Route::get('/login', ['uses' => 'Auth\Auth@login', 'as'=>'login']);
+        Route::post('/login', ['uses' => 'Auth\Auth@login', 'as'=>'login']);
+        Route::get('/logout', ['uses' => 'Auth\Auth@logout', 'as'=>'logout']);
+        Route::get('/register', ['uses' => 'Auth\Auth@register', 'as'=>'register']);
+        Route::post('/register', ['uses' => 'Auth\Auth@register', 'as'=>'register']);
+
         Route::get('/home', ['uses' => 'Home@index', 'as'=>'home_index']);
         Route::get('/language/{locale}', ['uses' => 'Language@choose', 'as'=>'language_choose']);
 
