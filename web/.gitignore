@@ -6,3 +6,4 @@ Homestead.json
 .env
 /.buildpath
 /.project
+_ide_helper.php
