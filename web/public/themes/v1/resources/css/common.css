@@ -71,8 +71,8 @@ textarea:hover, textarea.form-control:hover, input[type=text]:hover, input[type=
 }
 .btn-common:hover {
     color: #F1F1F1;
-    background-color: #00B572;
-    border-color: #008855;
+    background-color: #00a769;
+    border-color: #00965d;
 }
 #wrapper {
 	padding-top: 64px;
@@ -421,13 +421,13 @@ header {
 	color: #00a769;
 }
 footer {
-    background: #00a769;
+    background: #292929;
     color: #fff;
     position: relative;
     z-index: 99;
-    padding: 14px 0 13px;
-    font-size: 15px;
+    padding: 0px 0 30px;
     font-weight: 600;
+    border-top: 3px solid #00a769;
 }
 .logo-footer {
     width: 115px;
@@ -435,26 +435,6 @@ footer {
 footer >  div {
     margin-top: 0;
     font-size: 13px;
-}
-footer ul {
-    margin-bottom: 5px;
-}
-footer ul li {
-    float: left;
-}
-footer li a {
-    border-right: 1px solid #fff;
-    padding: 0 10px;
-    font-size: 13px;
-    color: #fff;
-    font-weight: 600;
-    display: block;
-}
-footer li a:hover {
-	text-decoration: underline;
-}
-footer p {
-    text-align: right;
 }
 .menu-user,
 .list-menu,
@@ -1265,4 +1245,60 @@ header,footer,#wrapper {
     .page-common {
         padding-top: 20px;
     }
+}
+.bgcover {
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover !important;
+    background-position: 50% top;
+}
+.btn-radius {
+	border-radius: 4px;
+}
+footer .infor-regis-web {
+	line-height: 25px;
+}
+footer .infor-regis-web p {
+	font-size: 14px;
+	font-weight: 400;
+}
+footer .infor-regis-web .name-cty {
+	font-weight: 600;
+	font-size: 18px;
+}
+.icon-social {
+	background: #00a769;
+	color: #fff;
+	display: inline-block;
+	width: 28px;
+	height: 28px;
+	border-radius: 50%;
+	margin-left: 10px;
+}
+.icon-social span {
+	display: block;
+	height: 100%;
+	line-height: 28px;
+}
+.menu-footer {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	text-align: center;
+}
+.menu-footer li {
+	display: inline-block;
+}
+.menu-footer li a {
+	text-transform: uppercase;
+	color: #fff;
+	display: inline-block;
+	padding: 0 15px;
+	border-left: 1px solid #fff;
+	line-height: 100%;
+}
+.menu-footer li:first-child a {
+	border: none;
+}
+.menu-footer li a:hover {
+	text-decoration: underline;
 }

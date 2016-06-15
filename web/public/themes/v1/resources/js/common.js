@@ -7,7 +7,7 @@ $(document).ready(function () {
     var wWindow = $(window).outerWidth(),
         hWindow = $(window).outerHeight();
 
-    if ( checkMobile() ) {
+    /*if ( checkMobile() ) {
         $('.search-home').css({
             height: $(window).outerHeight() - 40
         });
@@ -16,7 +16,7 @@ $(document).ready(function () {
             height: $(window).outerHeight() - 40 - 130
         });
     }
-    $('.page-home').css('visibility','visible');
+    $('.page-home').css('visibility','visible');*/
 
     $('.tootip-show').tooltip();
 
