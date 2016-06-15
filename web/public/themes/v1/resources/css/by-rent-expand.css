@@ -1,0 +1,18 @@
+.detail-listing-default {
+    position: static;
+    top: 0;
+    left: 0;
+    padding: 0;
+    width: 100%;
+    right: inherit;
+    height: auto;
+    background: none;
+}
+.detail-listing-default .inner-detail {
+    box-shadow: 0px 0px 5px 0 rgba(0,0,0,.4);
+}
+@media (max-width: 1024px) {
+    .detail-listing-default {
+        display: block;
+    }
+}

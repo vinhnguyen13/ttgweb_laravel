@@ -1,0 +1,214 @@
+/* @import url("reset.css");
+@import url("icons.css");
+@import url("bootstrap.min.css");
+@import url("jquery.mmenu.css");
+@import url("common.css"); */
+
+.search-home:before {
+    display: inline-block;
+    /* content: ''; */
+    vertical-align: middle;
+    height: 100%;
+    width: 0;
+}
+.search-wrap-home {
+    width: 40%;
+    margin: 0 auto 0;
+    height: 100%;
+}
+.search-wrap-home:before {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    width: 0px;
+    visibility: hidden;
+    margin-right: -0.5em;
+}
+.search-wrap-home .search-center {
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    margin: 0 0 0 3px;
+}
+.logo-search-box {
+    width: 250px;
+    margin: 0 auto 15px;
+}
+#search-form {
+    position: relative;
+    height: 50px;
+}
+#search-form input[type=text] {
+    width: 100%;
+    height: 100%;
+    padding: 5px 40px 5px 10px;
+    box-shadow: 0px 0px 5px #EAEAEA;
+    -webkit-box-shadow: 0px 0px 5px #EAEAEA;
+    -moz-box-shadow: 0px 0px 5px #EAEAEA;
+    -ms-box-shadow: 0px 0px 5px #EAEAEA;
+    font-size: 14px;
+}
+#search-form #btn-search {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: none;
+    border: none;
+    height: 100%;
+    padding: 0 15px;
+    font-size: 25px;
+    color: #078C43;
+}
+.contact,
+.news,
+.featured-listing {
+    background: #f5f5f5;
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+.contact {
+    padding-bottom: 150px;
+}
+.title-sub {
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+    font-size: 19px;
+}
+.news {
+    background: #fff;
+}
+.news .info-item {
+    padding: 0;
+}
+.news .info-item a {
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+    margin-bottom: 8px;
+    display: block; 
+}
+.news .date-post {
+    color: #B9B9B9;
+    font-style: italic;
+}
+.list-news li {
+    margin-bottom: 30px;
+}
+.list-news .pic-intro {
+    height: 190px;
+}
+.txt-location {
+    font-size: 13px;
+    font-weight: 600;
+    text-shadow: 1px 1px 1px #fff;
+    -webkit-text-shadow: 1px 1px 1px #fff;
+    -moz-text-shadow: 1px 1px 1px #fff;
+    -ms-text-shadow: 1px 1px 1px #fff;
+}
+.txt-location, .map-location {
+    float: left;
+    width: 50%;
+    margin-bottom: 0;
+}
+.txt-location {
+    padding-left: 60px;
+}
+.map-location iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.map-location .img-show:before {
+    padding-top: 47%;
+}
+.txt-location .name-cty {
+    font-weight: 600;
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+.txt-location ul {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #fff;
+}
+.txt-location li {
+    border-bottom: solid 1px #dcdcdc;
+    border-top: 1px solid #fff;
+    float: left;
+    width: 100%;
+    padding: 12px 0;
+}
+.txt-location li p {
+    overflow: hidden;
+    text-transform: capitalize;
+    vertical-align: top;
+    padding-left: 10px;
+}
+.txt-location li span {
+	float: left;
+}
+.txt-location li:first-child {
+    border-top: none;
+}
+.txt-location .get-email {
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+.txt-location form input {
+    border: solid 1px #dedede;
+    height: 41px;
+    display: inline-block;
+    margin-right: 2%;
+    padding: 0 15px;
+    width: 60%;
+    background: #fff;
+}
+@media ( max-width: 1200px ) {
+    .news .info-item a {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    .search-wrap-home {
+		width: 60%;
+	}
+}
+.page-home {
+    visibility: hidden;
+}
+@media (min-width: 768px) {
+	
+}
+@media (max-width: 860px) {
+    .search-wrap-home {
+		width: 90%;
+	}
+	.txt-location, .map-location {
+	    width: 100%;
+	}
+	.map-location {
+	    margin-bottom: 20px;
+	}
+	.txt-location {
+	    padding-left: 0;
+	}
+	.logo-search-box {
+		width: 180px;
+	}
+	.logo-search-box img {
+		max-width: 100%;
+	}
+	.txt-location form input {
+		width: 100%;
+		margin-bottom: 10px;
+	}
+	.txt-location form {
+		overflow: hidden;
+	}
+	.txt-location button {
+		float: right;
+	}
+	.search-wrap-home .search-center {
+		margin-top: -32px;
+	}
+}
