@@ -1302,3 +1302,11 @@ footer .infor-regis-web .name-cty {
 .menu-footer li a:hover {
 	text-decoration: underline;
 }
+.keyword_wrapper .disable {
+    opacity: .3;
+}
+.keyword_wrapper .disable a:hover,
+.keyword_wrapper .disable a {
+    cursor: default;
+    text-decoration: inherit;
+}
