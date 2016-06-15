@@ -802,7 +802,20 @@
 	<script src="js/common.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function () {
-			
+			var arrImg = ['images/Buy_Hero_130988330_1024x500_2x.jpg', 'images/Buy_Hero_281623895_1024x500_2x.jpg', 'images/Anh-nha-lien-ke.png'],
+				imgRand = arrImg[Math.floor(Math.random() * arrImg.length)],
+				imgEmu = $('<img src='+imgRand+' />');
+
+			imgEmu
+				.load(function(){
+					$('.changer-bg').css({
+						'background-image': 'url('+imgRand+')'
+					}).fadeIn();
+				})
+				.error(function(){
+					
+				});
+
 		});
 	</script>
 
