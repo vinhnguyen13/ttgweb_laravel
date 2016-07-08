@@ -24,7 +24,24 @@
     -moz-osx-font-smoothing: grayscale;
     vertical-align: middle;
 }
-
+.icon-edit:before {
+    content: "\f044";
+}
+.icon-bar-chart:before {
+    content: "\f080";
+}
+.icon-arrow-up2:before {
+    content: "\e950";
+}
+.icon-pricing:before {
+    content: "\e94d";
+}
+.icon-clock:before {
+    content: "\e94e";
+}
+.icon-coin-dollar:before {
+    content: "\e94c";
+}
 .icon-icon-bathroom:before {
     content: "\e917";
 }
@@ -256,13 +273,13 @@
     content: "\e91a";
 }
 .icon-page-1-copy:before {
-    content: "\e91b";
+    content: "\e94a";
 }
 .icon-close-icon:before {
     content: "\e91c";
 }
 .icon-bed-search:before {
-    content: "\e91d";
+    content: "\e92e";
 }
 .icon-fill-2-fill-6-fill-8:before {
     content: "\e91e";
