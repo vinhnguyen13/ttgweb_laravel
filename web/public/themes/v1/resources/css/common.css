@@ -1,8 +1,5 @@
-html {
-    height: 100%;
-}
-body {
-	min-height: 100%;
+html, body {
+    min-height: 100%;
 }
 a,
 body {
@@ -103,7 +100,7 @@ textarea:hover, textarea.form-control:hover, input[type=text]:hover, input[type=
 }
 #wrapper {
 	padding-top: 55px;
-	min-height: 100%;
+	height: 100%;
 }
 header {
 	box-shadow: 0 1px 0 0 #DEDEDE;
@@ -840,7 +837,7 @@ header,footer,#wrapper {
     width: 100%;
 }
 .user-ui-desktop .dropdown-up-style {
-	top: 63px;
+	top: 54px;
 	left: inherit;
 	right: 0;
 }
