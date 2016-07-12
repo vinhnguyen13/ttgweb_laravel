@@ -337,12 +337,6 @@
     padding-right: 30px;
     background: #fff;
 }
-.detail-chat .title-chat {
-    font-size: 15px;
-    font-weight: 600;
-    padding: 14px 15px;
-    background: #efefef;
-}
 .detail-chat .title-chat .name-user {
 	text-shadow: 1px 1px 1px #fff;
 	-webkit-text-shadow: 1px 1px 1px #fff;
@@ -394,129 +388,6 @@
     overflow: hidden;
     text-overflow: ellipsis;
     margin-top: 2px;
-}
-.iput-chat {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    left: 0;
-    padding: 8px 7px;
-    background: #ececec;
-    border-top: 1px solid #ccc;
-}
-.iput-chat .typing-txt {
-    position: relative;
-    background: #fff;
-}
-.iput-chat .typing-txt button {
-    position: absolute;
-    top: 0;
-    right: 0;
-    border: none;
-    font-size: 13px;
-    background: #00a769;
-    padding: 7px 15px;
-    color: #fff;
-    font-weight: 600;
-}
-.iput-chat .typing-txt input {
-    border-radius: 0;
-    border: solid 1px #00a769;
-}
-.items-mess {
-    /* background: rgba(0, 167, 105, 0.06); */
-    padding: 15px 25px;
-}
-.items-mess .item-mess {
-    margin-bottom: 30px;
-}
-.item-mess .avatar-user {
-    width: 60px;
-    display: block;
-    height: 60px;
-    overflow: hidden;
-    border-radius: 50%;
-    padding: 3px;
-    background: #fff;
-    border: 1px solid #00a769;
-    float: left;
-}
-.items-mess .item-me .avatar-user {
-    float: right;
-}
-.item-mess .avatar-user span {
-    display: block;
-    border-radius: 50%;
-    overflow: hidden;
-}
-.items-mess .item-mess .info-item {
-    overflow: hidden;
-    padding: 0 0 0 25px;
-    position: relative;
-}
-.item-you .info-item .date-mess {
-	text-align: right;
-}
-.item-me .info-item .date-mess {
-	text-align: left;
-}
-.items-mess .item-me .info-item {
-	padding: 0 25px 0 0;
-}
-.item-you .info-item:after,
-.item-you .info-item:before {
-	top: 12px;
-	left: 15px;
-	border: solid transparent;
-	content: " ";
-	height: 0;
-	width: 0;
-	position: absolute;
-	pointer-events: none;
-}
-.item-you .info-item:after {
-	border-color: rgba(136, 183, 213, 0);
-	border-right-color: #fff;
-	border-width: 9px;
-	margin-left: -7px;
-	top: 14px;
-}
-.item-you .info-item:before {
-	border-color: rgba(194, 225, 245, 0);
-	border-right-color: #ccc;
-	border-width: 11px;
-	margin-left: -11px;
-}
-.item-me .info-item:after,
-.item-me .info-item:before {
-	top: 12px;
-	right: 15px;
-	border: solid transparent;
-	content: " ";
-	height: 0;
-	width: 0;
-	position: absolute;
-	pointer-events: none;
-}
-.item-me .info-item:after {
-	border-color: rgba(136, 183, 213, 0);
-	border-left-color: #fff;
-	border-width: 9px;
-	margin-right: -7px;
-	top: 14px;
-}
-.item-me .info-item:before {
-	border-color: rgba(194, 225, 245, 0);
-	border-left-color: #ccc;
-	border-width: 11px;
-	margin-right: -11px;
-}
-.item-mess .wrap-txt {
-    background: #fff;
-    padding: 6px 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    box-shadow: 0px 0px 2px rgba(204, 204, 204, 0.58);
 }
 /*-------End Chat--------*/
 
@@ -812,6 +683,12 @@
     }
     .block-bdk {
         margin: 0 -10px;
+    }
+    .items-chat {
+    	width: 100%;
+    }
+    .chat-his .detail-chat {
+    	display: none;
     }
 }
 @media (max-width: 550px) {

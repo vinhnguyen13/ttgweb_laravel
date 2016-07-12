@@ -538,13 +538,99 @@
 	</div>
 	<!-- InstanceEndEditable -->
 	</div>
+    
+    <div class="group-chat-box">
+    	<div class="inner-group-box">
+            <div class="detail-chat">
+                <div class="title-chat">
+                    <p class="name-user color-cd"><span class="icon-bubbles-icon fs-20 mgR-10"></span>Nguyễn Văn A</p>
+                    <a href="" class="close-item-chat"><span class="icon-close-icon"></span></a>
+                </div>
+                <div class="inner-box">
+                    <div class="items-mess">
+                        <div class="item-you item-mess clearfix">
+                            <a href="" class="avatar-user"><span><img src="images/MV-Agent Photo.jpg" alt="" /></span></a>
+                            <div class="info-item">
+                                <div class="wrap-txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</div>
+                                <p class="date-mess"><span class="icon-clock mgR-5"></span>8:30 - 11/07/2016</p>
+                            </div>
+                        </div>
+                        <div class="item-you item-mess clearfix">
+                            <a href="" class="avatar-user"><span><img src="images/MV-Agent Photo.jpg" alt="" /></span></a>
+                            <div class="info-item">
+                                <div class="wrap-txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</div>
+                                <p class="date-mess"><span class="icon-clock mgR-5"></span>8:30 - 11/07/2016</p>
+                            </div>
+                        </div>
+                        <div class="item-me item-mess clearfix">
+                            <a href="" class="avatar-user"><span><img src="images/MV-Agent Photo.jpg" alt="" /></span></a>
+                            <div class="info-item">
+                                <div class="wrap-txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</div>
+                                <p class="date-mess"><span class="icon-clock mgR-5"></span>8:30 - 11/07/2016</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="iput-chat">
+                        <div class="typing-txt">
+                            <input type="text" class="iput" />
+                            <button>Send</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="detail-chat">
+                <div class="title-chat">
+                    <p class="name-user color-cd"><span class="icon-bubbles-icon fs-20 mgR-10"></span>Nguyễn Văn A</p>
+                    <a href="" class="close-item-chat"><span class="icon-close-icon"></span></a>
+                </div>
+                <div class="inner-box">
+                    <div class="items-mess">
+                        <div class="item-you item-mess clearfix">
+                            <a href="" class="avatar-user"><span><img src="images/MV-Agent Photo.jpg" alt="" /></span></a>
+                            <div class="info-item">
+                                <div class="wrap-txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</div>
+                                <p class="date-mess"><span class="icon-clock mgR-5"></span>8:30 - 11/07/2016</p>
+                            </div>
+                        </div>
+                        <div class="item-you item-mess clearfix">
+                            <a href="" class="avatar-user"><span><img src="images/MV-Agent Photo.jpg" alt="" /></span></a>
+                            <div class="info-item">
+                                <div class="wrap-txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</div>
+                                <p class="date-mess"><span class="icon-clock mgR-5"></span>8:30 - 11/07/2016</p>
+                            </div>
+                        </div>
+                        <div class="item-me item-mess clearfix">
+                            <a href="" class="avatar-user"><span><img src="images/MV-Agent Photo.jpg" alt="" /></span></a>
+                            <div class="info-item">
+                                <div class="wrap-txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</div>
+                                <p class="date-mess"><span class="icon-clock mgR-5"></span>8:30 - 11/07/2016</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="iput-chat">
+                        <div class="typing-txt">
+                            <input type="text" class="iput" />
+                            <button>Send</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script src="js/velocity.js"></script>
 	<script src="js/common.js"></script>
+    <script type="text/javascript" src="js/jquery.slimscroll.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$('.group-chat-box .items-mess').slimScroll({
+		        height: '350px'
+		    });
+		});
+	</script>
 	<!-- InstanceBeginEditable name="EditRegion2" -->
-	<script type="text/javascript" src="js/jquery.slimscroll.min.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function () {
 
@@ -559,7 +645,7 @@
 		        height: hScrollListMess+'px'
 		    });
 
-		    $('.detail-chat .inner-box .items-mess').slimScroll({
+		    $('.chat-his .detail-chat .items-mess').slimScroll({
 		        height: hScrollIputMess+'px'
 		    });
 
