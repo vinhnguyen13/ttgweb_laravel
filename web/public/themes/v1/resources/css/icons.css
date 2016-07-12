@@ -24,6 +24,15 @@
     -moz-osx-font-smoothing: grayscale;
     vertical-align: middle;
 }
+.icon-mail-envelope-closed2:before {
+    content: "\e956";
+}
+.icon-mail-envelope-closed:before {
+    content: "\e955";
+}
+.icon-location:before {
+    content: "\e94f";
+}
 .icon-edit:before {
     content: "\f044";
 }
@@ -68,65 +77,6 @@
 }
 .icon-icon-gym:before {
     content: "\e936";
-}
-.icon-Hotel_Icon_Has_Indoor_Parking .path1:before {
-    content: "\e93d";
-    color: rgb(255, 255, 255);
-}
-.icon-Hotel_Icon_Has_Indoor_Parking .path2:before {
-    content: "\e93e";
-    margin-left: -1em;
-    color: rgb(0, 0, 0);
-}
-.icon-Hotel_Icon_Has_Indoor_Parking .path3:before {
-    content: "\e93f";
-    margin-left: -1em;
-    color: rgb(0, 0, 0);
-}
-.icon-Hotel_Icon_Has_Indoor_Parking .path4:before {
-    content: "\e940";
-    margin-left: -1em;
-    color: rgb(0, 0, 0);
-}
-.icon-Hotel_Icon_Has_Indoor_Parking .path5:before {
-    content: "\e941";
-    margin-left: -1em;
-    color: rgb(255, 255, 255);
-}
-.icon-Hotel_Icon_Has_Indoor_Parking .path6:before {
-    content: "\e942";
-    margin-left: -1em;
-    color: rgb(255, 255, 255);
-}
-.icon-Hotel_Icon_Has_Indoor_Parking .path7:before {
-    content: "\e943";
-    margin-left: -1em;
-    color: rgb(255, 255, 255);
-}
-.icon-Hotel_Icon_Has_Indoor_Parking .path8:before {
-    content: "\e944";
-    margin-left: -1em;
-    color: rgb(255, 255, 255);
-}
-.icon-Hotel_Icon_Has_Indoor_Parking .path9:before {
-    content: "\e945";
-    margin-left: -1em;
-    color: rgb(255, 255, 255);
-}
-.icon-Hotel_Icon_Has_Indoor_Parking .path10:before {
-    content: "\e946";
-    margin-left: -1em;
-    color: rgb(0, 0, 0);
-}
-.icon-Hotel_Icon_Has_Indoor_Parking .path11:before {
-    content: "\e947";
-    margin-left: -1em;
-    color: rgb(255, 255, 255);
-}
-.icon-Hotel_Icon_Has_Indoor_Parking .path12:before {
-    content: "\e948";
-    margin-left: -1em;
-    color: rgb(0, 0, 0);
 }
 .icon-sign-out:before {
     content: "\f08b";
@@ -243,7 +193,7 @@
     content: "\e90f";
 }
 .icon-phone-profile:before {
-    content: "\e910";
+    content: "\f095";
 }
 .icon-icons-search:before {
     content: "\e911";

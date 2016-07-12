@@ -32,6 +32,7 @@ textarea,textarea.form-control, input[type=text], input[type=email], input[type=
     box-shadow: none;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
+    background: #fff;
 }
 select,select.form-control {
 	cursor: pointer;
