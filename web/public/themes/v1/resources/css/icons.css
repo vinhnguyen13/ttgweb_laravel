@@ -24,6 +24,9 @@
     -moz-osx-font-smoothing: grayscale;
     vertical-align: middle;
 }
+.icon-flag:before {
+    content: "\e954";
+}
 .icon-mail-envelope-closed2:before {
     content: "\e956";
 }
