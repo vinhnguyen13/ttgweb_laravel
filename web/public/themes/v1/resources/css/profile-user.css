@@ -1,0 +1,181 @@
+.block-profile {
+	font-size: 14px;
+}
+.block-profile .avatar-user {
+	width: 120px;
+	overflow: hidden;
+	border-radius: 5px;
+	float: left;
+	margin-right: 15px;
+}
+.block-profile .info-item {
+	overflow: hidden;
+	padding: 0;
+	font-size: 14px;
+}
+.block-profile .name-user {
+	font-size: 20px;
+	margin-bottom: 5px;
+}
+.block-profile .info-item p {
+	margin-bottom: 5px;
+}
+.block-profile .dia-chi span {
+	position: relative;
+	top: -1px;
+}
+.block-profile p span {
+	width: 30px;
+	display: inline-block;
+}
+.your-profile .block-profile .icon-flag,
+.your-profile .block-profile .icon-bubbles-icon {
+	width: auto;
+}
+.rateit {
+    display: -moz-inline-box;
+    display: inline-block;
+    position: relative;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.rateit .rateit-range {
+    position: relative;
+    display: -moz-inline-box;
+    display: inline-block;
+    background: url(../images/icon-star.png) no-repeat top left;
+    background-size: 103px 56px;
+    height: 16px;
+    outline: none;
+}
+.rateit .rateit-range * {
+    display:block;
+}
+/* for IE 6 */
+* html .rateit, * html .rateit .rateit-range {
+    display: inline;
+}
+/* for IE 7 */
+* + html .rateit, * + html .rateit .rateit-range {
+    display: inline;
+}
+.rateit .rateit-hover, .rateit .rateit-selected {
+    position: absolute;
+    left: 0px;
+}
+.rateit .rateit-hover-rtl, .rateit .rateit-selected-rtl {
+    left: auto;
+    right: 0px;
+}
+.rateit .rateit-hover {
+    background: url(../images/icon-star.png) no-repeat 1px -38px;
+    background-size: 103px 56px;
+}
+.rateit .rateit-hover-rtl {
+    background-position: right -32px;
+}
+.rateit .rateit-selected {
+    background: url(../images/icon-star.png) no-repeat 1px -19px;
+    background-size: 103px 56px;
+}
+.rateit .rateit-selected-rtl {
+    background-position: right -16px;
+}
+.rateit .rateit-preset {
+    /* background: url(star.gif) left -48px; */
+}
+.rateit .rateit-preset-rtl {
+    background: url(star.gif) left -48px;
+}
+.rateit button.rateit-reset {
+    background: url(delete.gif) 0 0;
+    width: 16px;
+    height: 16px;
+    display: -moz-inline-box;
+    display: inline-block;
+    float: left;
+    outline: none;
+    border:none;
+    padding: 0;
+}
+.rateit button.rateit-reset:hover, .rateit button.rateit-reset:focus {
+    background-position: 0 -16px;
+}
+.your-profile .list-item > li {
+	width: 50%;
+}
+.your-profile .nav-tabs {
+	border: none;
+}
+.your-profile .title-box p {
+	float: left;
+}
+.your-profile .nav-tabs>li {
+	margin: 0;
+}
+.your-profile .nav-tabs>li>a {
+	padding: 8px 20px;
+	font-size: 14px;
+	border-bottom: none;
+	margin: 0 5px 0 0;
+	background: #00a769;
+	font-weight: 600;
+	color: #fff;
+}
+.your-profile .nav-tabs>li:last-child>a {
+	margin: 0;
+}
+.your-profile .nav-tabs>li.active>a,
+.your-profile .nav-tabs>li.active>a:focus,
+.your-profile .nav-tabs>li.active>a:hover {
+	border: 1px solid #00a769;
+	border-bottom: none;
+	background: none;
+	color: #3c3c3c;
+}
+.your-profile .title-box {
+	border-bottom: 2px solid #00a769;
+}
+.item-review .avatar-user {
+	width: 60px;
+	display: block;
+	border-radius: 50%;
+	overflow: hidden;
+	float: left;
+}
+.item-review .info-item {
+	overflow: hidden;
+	padding: 0 0 0 15px;
+}
+.item-review .info-item .name-user a {
+	font-weight: 600;
+	display: inline-block;
+	margin-right: 5px;
+}
+.item-review .info-item .name-user {
+	line-height: 100%;
+	margin-bottom: 7px;
+}
+.item-review .info-item .name-user span {
+	display: inline-block;
+	border-left: 1px solid #ccc;
+	padding: 0 6px;
+}
+.your-profile .col-left .view-more {
+	font-size: 14px;
+	border: 1px dotted #00a769;
+	padding: 5px 20px;
+	display: inline-block;
+	line-height: 100%;
+	border-radius: 3px;
+	font-weight: 600;
+	color: #00a769;
+}
