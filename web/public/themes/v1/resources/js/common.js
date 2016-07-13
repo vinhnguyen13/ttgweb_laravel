@@ -4,19 +4,13 @@ $(window).on('load', function () {
 $(document).ready(function () {
     'use strict';
 
+    $('.detail-chat .close-item-chat').on('click', function (e) {
+        e.preventDefault();
+        $(this).closest('.detail-chat').remove();
+    });
+
     var wWindow = $(window).outerWidth(),
         hWindow = $(window).outerHeight();
-
-    /*if ( checkMobile() ) {
-        $('.search-home').css({
-            height: $(window).outerHeight() - 40
-        });
-    }else {
-        $('.search-home').css({
-            height: $(window).outerHeight() - 40 - 130
-        });
-    }
-    $('.page-home').css('visibility','visible');*/
 
     $('.tootip-show').tooltip();
 

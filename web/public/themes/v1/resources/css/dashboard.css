@@ -440,6 +440,9 @@
 .tbl-wrap .thead > div {
 	font-weight: 600;
 	border-bottom: 2px solid #ccc;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 .search-pay {
 	margin-bottom: 10px;
@@ -448,6 +451,7 @@
 .search-pay input[type=text] {
 	width: 250px;
 	margin-right: 10px;
+	margin-bottom: 10px;
 }
 
 /*-----End Payment-------------*/
@@ -661,6 +665,16 @@
     }
 }
 @media (max-width: 768px) {
+	.keys-recent {
+		width: 100%;
+	}
+	.tbl-wrap > div > div {
+		width: auto;
+	}
+	.tbl-wrap > div > div.col-gc,
+	.tbl-wrap > div > div.col-mtd {
+		display: none;
+	}
     .item-posted {
         float: left;
         width: 50%;
@@ -690,6 +704,18 @@
     .chat-his .detail-chat {
     	display: none;
     }
+}
+@media (max-width: 640px) {
+	.your-profile .list-item > li {
+		width: 100%;
+	}
+	.your-profile .title-box p {
+		font-size: 14px;
+		line-height: inherit;
+	}
+	.your-profile .nav-tabs>li>a {
+		padding: 5px 15px;
+	}
 }
 @media (max-width: 550px) {
 	.block-profile .avatar-user {
