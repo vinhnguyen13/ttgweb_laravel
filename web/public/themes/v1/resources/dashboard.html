@@ -50,7 +50,7 @@
 
 	        <div class="user-ui-desktop">
 	        	<!-- is login -->
-        		<ul class="clearfix">
+        		<ul class="clearfix hide">
 		            <li class="chat-header">
 		            	<div class="dropdown-emu">
 			            	<a class="val-selected clearfix tootip-show" href="#" data-toggle="tooltip" data-placement="bottom" title="Tin nhắn">
@@ -173,42 +173,37 @@
 		            </li>
 		        </ul>
 			    <!-- is logout -->
-			    <!-- <ul class="clearfix">
-			    	<li class="option-user">
-			    		<div class="dropdown-emu">
-			            	<a class="val-selected clearfix" data-toggle="tooltip" data-placement="bottom" href="#" title="" data-original-title="Profile">
-			    		                        <span class="wrap-img avatar"><img src="images/default-avatar.jpg" alt="" width="40" height="40"></span>
-			    		                        <div>
-			    		                            <p>Guest</p>
-			    		                        </div>
-			    		                    </a>
-			    		                    <div class="dropdown-up-style hide">
-			    		                    	<div class="item-dropdown">
-			                        <ul class="clearfix">
-			                            <li>
-			                                <a href="/superadmin">
-			                                    <div><span class="icon-user-icon-profile1"></span></div>Profile
-			                                </a>
-			                            </li>
-			                            <li>
-			                            	<a data-method="post" href="#"><div><span class="icon-settings"></span></div>Setting</a>
-			                            </li>
-			                            <li>
-			                            	<a data-method="post" href="#"><div><span class="icon icon-logout"></span></div>Log Out</a>
-			                            </li>
-			                            <li class="flag-lang">
-			                                <div class="pull-right">
-			                                    <a href="#"><img src="images/flag-en.png" alt=""></a>
-			                                    <a href="#"><img src="images/flag-vn.png" alt=""></a>
-			                                </div>
-			                                Language                                
-			                            </li>
-			                        </ul>
-			    		                        </div>
-			    		                    </div>
-			    	                    </div>
-			    		            </li>
-			    </ul> -->
+			    <ul class="clearfix">
+					<li class="option-user">
+						<div class="dropdown-emu">
+							<a class="val-selected clearfix" data-toggle="tooltip" data-placement="bottom" href="#" title="" data-original-title="Profile">
+								<span class="wrap-img avatar"><img src="images/default-avatar.jpg" alt="" width="40" height="40"></span>
+								<div>
+									<p>Guest</p>
+								</div>
+							</a>
+							<div class="dropdown-up-style hide">
+								<div class="item-dropdown">
+									<ul class="clearfix">
+										<li>
+											<a href="#" class="user-login-link">Đăng nhập</a>
+										</li>
+										<li>
+											<a href="#" class="user-signup-link">Đăng ký</a>
+										</li>
+										<li class="flag-lang">
+											<div class="pull-right">
+                                                <a href="#"><img src="images/flag-en.png" alt=""></a>
+                                                <a href="#"><img src="images/flag-vn.png" alt=""></a>
+											</div>
+											Language                                
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
         	</div>
 
         	<div class="user-ui-mobile">
@@ -667,6 +662,81 @@
 	<!-- InstanceEndEditable -->
 	</div>
     
+    <div id="popup-login" class="modal fade popup-common" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                	<div class="wrap-popup">
+                    	<div class="title-popup">
+							Đăng nhập
+                            <a href="#" class="btn-close close" data-dismiss="modal" aria-label="Close"><span class="icon-close-icon"></span></a>
+                        </div>
+                        <div class="inner-popup">
+                        	<ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                	<a href="#tab-signin" aria-controls="tab-signin" role="tab" data-toggle="tab">Đăng nhập</a>
+                                </li>
+                                <li role="presentation">
+                                	<a href="#tab-signup" aria-controls="tab-signup" role="tab" data-toggle="tab">Đăng ký</a>
+                                </li>
+                            </ul>
+                            
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane fade in active" id="tab-signin">
+                                    <div class="signin">
+                                        <form id="login-form" class="frmIcon" action="" method="post">
+                                            <div class="form-group">
+                                                <div class="form-group field-login-form-login required">
+                                                    <input type="text" id="login-form-login" class="form-control" name="login-form[login]" placeholder="Email">
+                                                    <div class="help-block">Đăng nhập không được để trống.</div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group field-login-form-password required">
+                                                <input type="password" id="login-form-password" class="form-control" name="login-form[password]" placeholder="Mật khẩu">
+                                                <div class="help-block"></div>
+                                            </div>
+                                            <div class="clearfix mgB-15">
+                                                <a class="showPopup text-decor" href="#">Quên mật khẩu ?</a>
+                                                <label class="font-400 pull-right">
+                                                    <input type="checkbox" id="login-form-rememberme" name="login-form[rememberMe]" value="1"> Ghi nhớ lần sau
+                                                </label>
+                                            </div>
+                                            <div class="footer-modal clearfix mgB-15">
+                                                <button type="button" class="btn-primary btn-common btn-login" id="btn-login">Đăng nhập</button>
+                                            </div>
+                                        </form>
+                                        <div id="w0">
+                                            <ul class="list-social-login clearfix">
+                                                <li class="">
+                                                    <a class="btn btn-default facebook" href="" data-popup-width="860" data-popup-height="480">
+                                                        <span class="auth-title">
+                                                            <span class="icon-mv"><span class="icon-facebook"></span></span>Đăng nhập bằng Facebook
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <p class="pdT-20">Bạn đã có tài khoản ? <a class="cl000 text-decor font-600 link-regis-b" href="#"> Đăng ký ngay</a></p>
+                                    </div>
+                                </div>
+                                <div role="tabpanel" class="tab-pane fade" id="tab-signup">
+                                    <div class="signup">
+                                        <div id="w1">
+                                            <ul class="list-social-login clearfix">
+                                                <li class=""><a class="btn btn-default facebook" href="#" data-popup-width="860" data-popup-height="480"><span class="auth-title"><span class="icon-mv"><span class="icon-facebook"></span></span>Đăng ký bằng Facebook</span></a></li>
+                                            </ul>
+                                        </div>
+                                        <p class="pdT-20">Bạn đã có tài khoản ? <a class="cl000 text-decor font-600 link-login-b" href="#"> Đăng nhập ngay</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
     <div class="group-chat-box">
     	<div class="inner-group-box">
             <div class="detail-chat">
@@ -756,6 +826,26 @@
 			$('.group-chat-box .items-mess').slimScroll({
 		        height: '350px'
 		    });
+			
+			$('.user-login-link, .user-signup-link').on('click', function (e) {
+				e.preventDefault();
+				if ( $(this).hasClass('user-login-link') ) {
+					$('a[href=#tab-signin]').trigger('click');
+				}else {
+					$('a[href=#tab-signup]').trigger('click');
+				}
+				$('#popup-login').modal('show');
+			});
+			
+			$('.link-login-b, .link-regis-b').on('click', function (e) {
+				e.preventDefault();
+				if ( $(this).hasClass('link-login-b') ) {
+					$('a[href=#tab-signin]').trigger('click');
+				}else {
+					$('a[href=#tab-signup]').trigger('click');
+				}
+			});
+			
 		});
 	</script>
 	<!-- InstanceBeginEditable name="EditRegion2" -->

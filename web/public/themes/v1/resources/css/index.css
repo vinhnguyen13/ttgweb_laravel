@@ -177,6 +177,7 @@
     float: left;
     width: 100%;
     padding: 12px 0;
+    font-size: 14px;
 }
 .txt-location li p {
     overflow: hidden;
@@ -186,6 +187,20 @@
 }
 .txt-location li span {
 	float: left;
+}
+.txt-location li .icon-pin-active-copy-3 {
+	font-size: 18px;
+	position: relative;
+	top: 3px;
+}
+.txt-location li .icon-phone-profile {
+	font-size: 18px;
+	top: 2px;
+	position: relative;
+}
+.txt-location li .icon-mail-profile {
+	position: relative;
+	top: 3px;
 }
 .txt-location li:first-child {
     border-top: none;

@@ -351,6 +351,8 @@ header {
 .attr-detail {
 	margin-bottom: 10px;
 }
+.infor-detail .attr-detail {
+}
 .attr-detail li {
 	float: left;
 	margin-right: 12px;
@@ -1527,4 +1529,57 @@ footer .infor-regis-web .name-cty {
 .iput-chat .typing-txt input {
     border-radius: 0;
     border: solid 1px #00a769;
+}
+#popup-login .modal-dialog {
+	width: 350px;
+	font-size: 14px;
+}
+#popup-login .modal-dialog .nav-tabs {
+	margin-bottom: 20px;
+	font-weight: 600;
+}
+.btn-login {
+	background: none;
+	color: #3c3c3c;
+	border: 1px solid #00a769;
+	width: 100%;
+	display: block;
+	padding: 10px 0;
+	text-transform: uppercase;
+	font-weight: 600;
+}
+.facebook.btn {
+	border: 1px solid #3a5795;
+	background: none;
+	border-radius: 0;
+	width: 100%;
+	text-transform: uppercase;
+	font-weight: 600;
+	color: #3c3c3c;
+	padding: 10px 10px 7px;
+	font-size: 13px;
+}
+.facebook.btn:hover {
+	background: #3a5795;
+	color: #fff;
+}
+.facebook.btn .icon-mv {
+	position: relative;
+	top: -3px;
+	margin-right: 10px;
+}
+input[type=checkbox], input[type=radio] {
+	position: relative;
+	top: 1px;
+	margin: 0;
+}
+.help-block {
+	display: none;
+}
+.has-error .help-block {
+	display: block;
+}
+#login-form input[type=password],
+#login-form input[type=text] {
+	height: 35px;
 }
