@@ -351,8 +351,7 @@ header {
 .attr-detail {
 	margin-bottom: 10px;
 }
-.infor-detail .attr-detail {
-}
+.infor-detail .attr-detail {margin-bottom: 12px;}
 .attr-detail li {
 	float: left;
 	margin-right: 12px;
