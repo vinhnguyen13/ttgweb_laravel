@@ -458,13 +458,21 @@
 /*-----My Profile-------------*/
 .block-profile {
 	font-size: 14px;
+	margin-top: 30px;
 }
 .block-profile .avatar-user {
 	width: 120px;
+	margin: 0 auto 0;
+}
+.block-profile .avatar-profile {
+	float: right;
+	width: 30%;
+}
+.block-profile .avatar-user span {
+	display: block;
+	margin-bottom: 10px;
 	overflow: hidden;
 	border-radius: 5px;
-	float: left;
-	margin-right: 15px;
 }
 .block-profile .info-item {
 	overflow: hidden;
@@ -494,6 +502,36 @@
 }
 .block-profile p span.icon-edit:hover {
 	color: #00a769;
+}
+.block-profile .group-frm {
+	position: relative;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.08);
+	margin-bottom: 50px;
+}
+.block-profile .group-frm .inner-group {
+	border: 1px solid #fff;
+	padding: 30px 30px 15px;
+	border-radius: 4px;
+}
+.block-profile .group-frm .title-frm {
+	position: absolute;
+	top: -12px;
+	left: 20px;
+	background: #f5f5f5;
+	font-weight: 600;
+	font-size: 15px;
+	text-transform: uppercase;
+	padding: 0 15px;
+}
+.block-profile .group-frm label {
+	font-weight: 600;
+	font-size: 13px;
+}
+.block-profile .detail-profile  {
+	float: left;
+	width: 70%;
 }
 /*-----End My Profile-------------*/
 
@@ -616,6 +654,16 @@
         text-overflow: inherit;
         overflow: inherit;
         white-space: inherit;
+    }
+    .block-profile .avatar-profile {
+    	width: 100%;
+    	margin-bottom: 20px;
+    }
+    .block-profile .detail-profile {
+    	width: 100%;
+    }
+    .block-profile {
+    	margin-top: 0;
     }
 }
 @media (max-width: 460px) {
