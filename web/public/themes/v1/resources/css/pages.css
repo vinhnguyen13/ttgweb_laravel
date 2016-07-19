@@ -1,10 +1,14 @@
 .contact-block {
     width: 50%;
-    background: #f7f7f7;
-    padding: 15px;
+    /* background: #f7f7f7; */
     border-radius: 4px;
     border: 1px solid #ccc;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.12);
+}
+.contact-block .inner-box {
+    border: 1px solid #fff;
+    padding: 15px;
+    border-radius: 4px;
 }
 #contact-form button {
     padding: 12px 40px;
@@ -16,4 +20,15 @@
     list-style-type: disc;
     padding-left: 0px;
     margin-bottom: 10px;
+}
+.lai-suat-block label,
+#contact-form label {
+    font-weight: 600;
+    font-size: 13px;
+}
+.lai-suat-block {
+    width: 70%;
+}
+.lai-suat-block .inner-box {
+    
 }

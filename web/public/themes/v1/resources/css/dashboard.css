@@ -533,6 +533,9 @@
 	float: left;
 	width: 70%;
 }
+.block-profile .group-frm textarea {
+	height: 150px;
+}
 /*-----End My Profile-------------*/
 
 

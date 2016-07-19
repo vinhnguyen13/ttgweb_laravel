@@ -14,7 +14,7 @@
 	<link href="css/reset.min.css" rel="stylesheet" type="text/css" />
 	<link href="css/jquery.mmenu.css" rel="stylesheet" type="text/css" />
 	<!-- InstanceBeginEditable name="EditRegion1" -->
-	
+	<link href="css/pages.css" rel="stylesheet" type="text/css" />
 	<!-- InstanceEndEditable -->
 	<link href="css/common.css" rel="stylesheet" type="text/css" />
 	<!--[if lt IE 9 ]>
@@ -272,7 +272,95 @@
 
 	<div id="wrapper">
 	<!-- InstanceBeginEditable name="EditRegion3" -->
-	
+	<div class="page-common">
+        <div class="wrap-page">
+            <div class="container fs-14">
+            	<div class="title-page">TÍNH LÃI SUẤT VAY VỐN</div>
+            	<div class="lai-suat-block">
+            		<div class="inner-box">
+			            <p class="mgB-20">Cho phép bạn tính toán tiền tiết kiệm khi gửi một số tiền theo một kỳ hạn nhất định và so sánh lãi suất, tiền được hưởng giữa các ngân hàng</p>
+			            <form class="form-horizontal">
+			                <div class="form-group">
+			                    <label for="" class="col-sm-2 control-label">Ngày bắt đầu</label>
+			                    <div class="col-sm-5">
+			                        <input type="text" id="ngayBatDau" class="hasDatepicker">
+			                    </div>
+			                </div>
+			                <div class="form-group">
+			                    <label for="" class="col-sm-2 control-label">Số tiền vay</label>
+			                    <div class="col-sm-5 ver-c">
+			                        <input type="text" id="soTienVay" name="soTienVay" value="">
+			                        
+			                    </div>
+								<div class="col-sm-5 pdL-0 lh-30">VND</div>
+			                </div>
+			                <div class="form-group">
+			                    <label for="" class="col-sm-2 control-label">Hình thức trả nợ</label>
+			                    <div class="col-sm-5 ver-c">
+			                        <select id="hinhThucTraNo" name="hinhThucTraNo">
+			                            <option value=""> Chọn hình thức trả nợ </option>
+			                            <option value="4"> Trả gốc đều hàng tháng, trả lãi theo dư nợ giảm dần </option>
+			                            <option value="3"> Trả theo phương thức niêm kim cố định </option>
+			                            <option value="2"> Trả gốc cuối kỳ, trả lãi hàng tháng theo dư nợ thực tế. </option>
+			                        </select>
+			                    </div>
+			                </div>
+			                <div class="form-group">
+			                    <label for="" class="col-sm-2 control-label">Lãi suất</label>
+			                    <div class="col-sm-5 ver-c">
+			                        <input type="text" id="laiSuat" name="laiSuat" value="">
+			                    </div>
+								<div class="col-sm-3 pdL-0">
+								  	<select id="theoThoiGian" name="theoThoiGian">
+			                            <option value="thang"> Theo tháng </option>
+			                            <option value="nam"> Theo năm </option>
+			                        </select>
+								</div>
+			                </div>
+			                <div class="form-group">
+			                    <label for="" class="col-sm-2 control-label">Thời gian</label>
+			                    <div class="col-sm-5 ver-c">
+			                        <input type="text" name="thoiGianVay" id="thoiGianVay" value="">
+			                    </div>
+								<div class="col-sm-5 pdL-0 lh-30">Tháng</div>
+			                </div>
+			                <div class="form-group">
+			                    <label for="" class="col-sm-2 control-label"></label>
+			                    <div class="col-sm-10 ver-c">
+			                        <a href="#" onclick="Tools.loan_calculate();" class="btn-form btn-common btn-bd-radius"> Tính nhanh</a>
+			                    </div>
+			                </div>
+			                <div class="title-page mgT-50">kết quả</div>
+			                <div class="form-group">
+			                    <div class="col-sm-3 font-600 fs-13 text-right">Ngày bắt đầu vay vốn:</div>
+			                    <div class="col-sm-9 fs-13">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</div>
+			                </div>
+			                <div class="form-group">
+			                    <div class="col-sm-3 font-600 fs-13 text-right">Số tiền vay:</div>
+			                    <div class="col-sm-9 fs-13">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</div>
+			                </div>
+			                <div class="form-group">
+			                    <div class="col-sm-3 font-600 fs-13 text-right">Hình thức trả nợ:</div>
+			                    <div class="col-sm-9 fs-13">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</div>
+			                </div>
+			                <div class="form-group">
+			                    <div class="col-sm-3 font-600 fs-13 text-right">Lãi suất:</div>
+			                    <div class="col-sm-9 fs-13">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</div>
+			                </div>
+			                <div class="form-group">
+			                    <div class="col-sm-3 font-600 fs-13 text-right">Thời gian:</div>
+			                    <div class="col-sm-9 fs-13">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</div>
+			                </div>
+			                <div class="form-group">
+			                    <div class="col-sm-3 font-600 fs-13 text-right">Tổng số tiền phải trả:	</div>
+			                    <div class="col-sm-9 fs-13">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</div>
+			                </div>
+			            </form>
+					</div>
+				</div>
+            </div>
+        </div>
+    </div>
 	<!-- InstanceEndEditable -->
 	</div>
 
