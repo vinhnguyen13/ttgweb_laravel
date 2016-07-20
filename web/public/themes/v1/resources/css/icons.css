@@ -24,6 +24,12 @@
     -moz-osx-font-smoothing: grayscale;
     vertical-align: middle;
 }
+.icon-circle-check:before {
+    content: "\e042";
+}
+.icon-202952:before {
+    content: "\e957";
+}
 .icon-flag:before {
     content: "\e954";
 }

@@ -799,12 +799,16 @@ header,footer,#wrapper {
 	footer ul li {
 		width: 50%;
 		padding: 0 10px;
+		float: left;
 	}
 	footer li a {
 		border: none;
 		border-bottom: 1px solid #fff;
 		padding-bottom: 10px;
 		padding-top: 10px;
+	}
+	.menu-footer li a {
+		border-left: none;
 	}
 }
 @media (min-width: 320px) and (max-width: 410px) {
@@ -905,7 +909,7 @@ header,footer,#wrapper {
 	z-index: 1000;
 }
 .dropdown-emu {
-	/* position: relative; */
+	position: relative;
 }
 .user-ui-desktop .item-dropdown li a {
 	font-size: 14px;
@@ -1323,6 +1327,7 @@ footer .infor-regis-web .name-cty {
 }
 .menu-footer li {
 	display: inline-block;
+	margin-bottom: 15px;
 }
 .menu-footer li a {
 	text-transform: uppercase;
@@ -1593,4 +1598,17 @@ input[type=checkbox], input[type=radio] {
 #login-form input[type=password],
 #login-form input[type=text] {
 	height: 35px;
+}
+.val-selected.active .icon-caret-down:before {
+	content: "\e904";
+}
+@media (max-width: 550px) {
+	.menu-footer li a {
+		border-left: none;
+		padding: 0;
+		border-bottom: 1px solid #fff;
+	}
+	.menu-footer li:first-child a {
+		border-bottom: 1px solid #fff;
+	}
 }

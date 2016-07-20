@@ -32,3 +32,14 @@
 .lai-suat-block .inner-box {
     
 }
+@media (max-width: 768px) {
+    .lai-suat-block .form-group .text-right {
+        text-align: left;
+    }
+	.lai-suat-block {
+		width: 100%;
+	}
+}
+@media (max-width: 550px) {
+    
+}
