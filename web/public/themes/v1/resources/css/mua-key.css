@@ -1,7 +1,9 @@
 .payment-method {
-    font-size: 14px;
     width: 70%;
-    /* margin: 0 auto 0; */
+    margin: 0 auto 0;
+}
+.payment-method .inner-box {
+    font-size: 14px;
     border: 1px solid #ccc;
     padding: 30px;
     border-radius: 4px;
