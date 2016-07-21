@@ -192,3 +192,77 @@ i.BAB { background-position:0px -868px;}
         width: 100%;
     }
 }
+@media (max-width: 550px) {
+    .payment-method .list-tabs a.active,
+    .payment-method .list-tabs a {
+        padding: 7px 0;
+        border: none;
+        box-shadow: none;
+        font-size: 12px;
+        background: #00a769;
+        border-radius: 0;
+        border-left: 1px solid #fff;
+        color: #fff;
+    }
+    .payment-method .list-tabs a.active {
+        background: #00633e;
+    }
+    .payment-method .list-tabs li:first-child a.active,
+    .payment-method .list-tabs li:first-child a {
+        border-left: none;
+    }
+    .payment-method .list-tabs a > div {
+        border: none;
+        height: 35px;
+    }
+    .payment-method .list-tabs a.active .icon-circle-check,
+    .payment-method .list-tabs a p {
+        display: none;
+    }
+    .payment-method .inner-box {
+        padding: 0;
+        background: none;
+        border: none;
+        box-shadow: none;
+    }
+    .payment-method .list-tabs li {
+        padding: 0;
+    }
+    .payment-method .list-tabs ul {
+        margin: 0;
+    }
+    .payment-method .inner-box p.fs-17 {
+        font-size: 13px;
+    }
+    .val-payment li {
+        padding: 0;
+        width: 100%;
+        border: none;
+        margin-bottom: 10px;
+    }
+    .val-payment {
+        border: none;
+        width: 100%;
+    }
+    .payment-method .list-tabs a > div:before {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+    }
+    .payment-method .list-tabs a > div span {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .mobi-card li:last-child {
+        margin-right: 0;
+    }
+    .mobi-card {
+        margin: 0 -10px;
+    }
+    .mobi-card li {
+        width: 33.333%;
+        margin-right: 0;
+        padding: 0 10px;
+    }
+}
