@@ -87,24 +87,45 @@ $.fn.dropdown = function (options) {
     return this.each(function() {
         var defaults = {
             selectedValue: false,
-            ajaxLoad: function () {},
-            open: function () {},
-            selectItem: function () {}
+            beforeOpen: function() {},
+            closeCallBack: function() {}
         },
         sc = {},
-        el = $(this);
+        el = $(this),
+        itemClick = el.find('.val-selected'),
+        txtItemClick = itemClick.find('.txt-selected'),
+        itemDropClick = el.find('.item-dropdown a');
 
         if ( el.length == 0 ) return el;
 
         sc.settings = $.extend({}, defaults, options);
 
-        el.find('.val-selected').on('click', toggleView);
+        itemClick.on('click', toggleView);
 
         showSortLoad();
+
+        if ( sc.settings.selectedValue ) {
+            selectItem();
+        }
         
         // set value input when reload page
         function showSortLoad () {
-            
+            if ( el.find('input[type=hidden]').val() != '' ) {
+                var valInputHidden = el.find('input[type=hidden]').val();
+                itemDropClick.each(function () {
+                    var _this = $(this),
+                        dataValue = _this.data('value'),
+                        txtItem = _this.text();
+
+                    if ( valInputHidden == dataValue ) {
+                        if ( txtItemClick.find('.get-val').length ) {
+                            txtItemClick.find('.get-val').text(txtItem);
+                        }else {
+                            txtItemClick.text(txtItem);
+                        }
+                    }
+                });
+            }
         }
 
         // toggle show and hide
@@ -118,18 +139,28 @@ $.fn.dropdown = function (options) {
                 setTimeout(function() {
                     el.find('.dropdown-up-style').addClass('hide');
                 },250);
+                sc.settings.closeCallBack(el);
             }else {
                 _this.addClass('active');
                 el.find('.dropdown-up-style').removeClass('hide');
                 setTimeout(function() {
                     el.find('.dropdown-up-style').addClass('active');
                 },50);
+                sc.settings.beforeOpen(el);
             }
         }
 
         // show item when click in dropdown
         function selectItem () {
-            
+            itemDropClick.on('click', function (e) {
+                e.preventDefault();
+                var _this = $(this),
+                    dataVal = _this.data('value'),
+                    txtClick = _this.text();
+                txtItemClick.text(txtClick);
+                el.find('input[type=hidden]').val(dataVal);
+                itemClick.trigger('click');
+            });
         }
 
         hideElOutSite(el, function () {

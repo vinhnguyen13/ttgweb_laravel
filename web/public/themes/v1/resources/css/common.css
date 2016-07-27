@@ -855,7 +855,7 @@ header,footer,#wrapper {
     width: 100%;
 }
 .user-ui-desktop .dropdown-up-style {
-	top: 54px;
+	top: 52px;
 	left: inherit;
 	right: 0;
 }
@@ -1344,12 +1344,12 @@ footer .infor-regis-web .name-cty {
 	text-decoration: underline;
 }
 .keyword_wrapper .disable {
-    opacity: .3;
+    /* opacity: .3; */
 }
 .keyword_wrapper .disable a:hover,
 .keyword_wrapper .disable a {
-    cursor: default;
-    text-decoration: inherit;
+    /* cursor: default; */
+    /* text-decoration: inherit; */
 }
 .full-width header > .container {
     width: 100%;

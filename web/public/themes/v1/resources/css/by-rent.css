@@ -395,6 +395,9 @@ li.search-listing input:focus {
     font-size: 16px;
     margin-right: 5px;
 }
+.frm-contact .infor-user-contact a .icon-mail-profile {
+    font-size: 13px;
+}
 .txt-small-note {
     font-size: 11px;
     font-style: italic;
@@ -442,6 +445,42 @@ li.search-listing input:focus {
 .infor-detail .price-item {
     font-size: 25px;
     margin: 0;
+}
+.fillter-listing  .dt-gia {
+    width: 230px;
+}
+.box-input {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+.box-input span {
+    float: left;
+}
+.box-input .txt-min-max {
+    width: 40%;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    text-align: center;
+    padding: 8px 0;
+    cursor: pointer;
+}
+.box-input .txt-min-max:hover,
+.box-input .txt-min-max.active {
+    background: #f1f1f1;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+}
+.box-input .line-center {
+    width: 20%;
+    line-height: 38px;
+    margin-top: 19px;
+    text-align: center;
+}
+.box-input .line-center span {
+    height: 1px;
+    background: #ccc;
+    display: inline-block;
+    width: 50%;
+    float: none;
 }
 @media (max-width: 1366px) {
     .listing-items {

@@ -678,7 +678,9 @@
 	<!-- InstanceBeginEditable name="EditRegion2" -->
 	<script>
 		$(window).on('load', function () {
-			$('#ttnh .dropdown-emu').dropdown();
+			$('#ttnh .dropdown-emu').dropdown({
+				selectedValue: true
+			});
 
 			$('.payment-method .list-tabs a').on('click', function (e) {
 				e.preventDefault();

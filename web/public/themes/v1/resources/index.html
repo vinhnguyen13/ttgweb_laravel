@@ -14,6 +14,7 @@
 	<link href="css/reset.min.css" rel="stylesheet" type="text/css" />
 	<link href="css/jquery.mmenu.css" rel="stylesheet" type="text/css" />
 	<!-- InstanceBeginEditable name="EditRegion1" -->
+	<link href="css/swiper.min.css" rel="stylesheet" type="text/css" />
 	<link href="css/index.css" rel="stylesheet" type="text/css" />
 	<!-- InstanceEndEditable -->
 	<link href="css/common.css" rel="stylesheet" type="text/css" />
@@ -476,7 +477,95 @@
         </div>
     </section>
 
-    <section class="news">
+	<section class="du-an-list mgT-50">
+		<div class="title-sub color-cd text-uper text-center fs-18">Dự án mới nổi bật</div>
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<a href="" class="pic-intro">
+						<img src="images/DreamHomes1293.jpg" alt="" />
+						<div class="infor-du-an">
+							<div>
+								<p class="text-uper fs-17 font-600">Novaland</p>
+								<p class="fs-30 mgB-5">SAIGON ROYAL RESIDENCE</p>
+								<p class="text-center mgB-10"><span class="line-bt"></span></p>
+								<p>Đảo Kim Cương, Bình Trưng Tây, Quận 2, Hồ Chí Minh, Việt Nam</p>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="swiper-slide">
+					<a href="" class="pic-intro">
+						<img src="images/DreamHomes2012834496.jpg" alt="" />
+						<div class="infor-du-an">
+							<div>
+								<p class="text-uper fs-17 font-600">The Lancaster</p>
+								<p class="fs-30 mgB-5">Lancaster Residences D4, Quận 4</p>
+								<p class="text-center mgB-10"><span class="line-bt"></span></p>
+								<p>Đường Tôn Thất Thuyết, Phường 16, Quận 4, Hồ Chí Minh</p>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="swiper-slide">
+					<a href="" class="pic-intro">
+						<img src="images/DreamHomes2012916353.jpg" alt="" />
+						<div class="infor-du-an">
+							<div>
+								<p class="text-uper fs-17 font-600">Novaland</p>
+								<p class="fs-30 mgB-5">SAIGON ROYAL RESIDENCE</p>
+								<p class="text-center mgB-10"><span class="line-bt"></span></p>
+								<p>Đảo Kim Cương, Bình Trưng Tây, Quận 2, Hồ Chí Minh, Việt Nam</p>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="swiper-slide">
+					<a href="" class="pic-intro">
+						<img src="images/DreamHomes1293.jpg" alt="" />
+						<div class="infor-du-an">
+							<div>
+								<p class="text-uper fs-17 font-600">Novaland</p>
+								<p class="fs-30 mgB-5">SAIGON ROYAL RESIDENCE</p>
+								<p class="text-center mgB-10"><span class="line-bt"></span></p>
+								<p>Đảo Kim Cương, Bình Trưng Tây, Quận 2, Hồ Chí Minh, Việt Nam</p>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="swiper-slide">
+					<a href="" class="pic-intro">
+						<img src="images/DreamHomes2012834496.jpg" alt="" />
+						<div class="infor-du-an">
+							<div>
+								<p class="text-uper fs-17 font-600">The Lancaster</p>
+								<p class="fs-30 mgB-5">Lancaster Residences D4, Quận 4</p>
+								<p class="text-center mgB-10"><span class="line-bt"></span></p>
+								<p>Đường Tôn Thất Thuyết, Phường 16, Quận 4, Hồ Chí Minh</p>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="swiper-slide">
+					<a href="" class="pic-intro">
+						<img src="images/DreamHomes2012916353.jpg" alt="" />
+						<div class="infor-du-an">
+							<div>
+								<p class="text-uper fs-17 font-600">Novaland</p>
+								<p class="fs-30 mgB-5">SAIGON ROYAL RESIDENCE</p>
+								<p class="text-center mgB-10"><span class="line-bt"></span></p>
+								<p>Đảo Kim Cương, Bình Trưng Tây, Quận 2, Hồ Chí Minh, Việt Nam</p>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="swiper-button-next"><span class="icon-angle-right"></span></div>
+        	<div class="swiper-button-prev"><span class="icon-angle-left"></span></div>
+		</div>
+	</section>
+
+    <section class="news mgT-50">
         <div class="container">
             <div class="title-sub color-cd text-uper text-center fs-18">tin tức bất động sản</div>
             <ul class="clearfix list-news row">
@@ -982,6 +1071,7 @@
 		});
 	</script>
 	<!-- InstanceBeginEditable name="EditRegion2" -->
+	<script src="js/swiper.jquery.min.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function () {
 			var arrImg = ['images/Buy_Hero_130988330_1024x500_2x.jpg', 'images/Buy_Hero_281623895_1024x500_2x.jpg', 'images/Anh-nha-lien-ke.png'],
@@ -997,6 +1087,27 @@
 				.error(function(){
 					
 				});
+
+			var swiper = new Swiper('.du-an-list .swiper-container', {
+		        nextButton: '.swiper-button-next',
+		        prevButton: '.swiper-button-prev',
+		        slidesPerView: 3,
+		        spaceBetween: 0,
+		        breakpoints: {
+		            1024: {
+		                slidesPerView: 3
+		            },
+		            768: {
+		                slidesPerView: 3
+		            },
+		            640: {
+		                slidesPerView: 2
+		            },
+		            320: {
+		                slidesPerView: 1
+		            }
+		        }
+		    });
 
 		});
 	</script>

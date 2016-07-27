@@ -100,7 +100,6 @@
 }
 .keyword_wrapper,
 .contact,
-.news,
 .featured-listing {
     padding-top: 50px;
 }
@@ -319,4 +318,48 @@
 .keyword_wrapper {
 	background: #f3f3f3;
 	padding-bottom: 20px;
+}
+.du-an-list .swiper-wrapper {
+	margin: 0 -2px;
+}
+.du-an-list .swiper-slide {
+	width: 33.3333%;
+	padding: 2px;
+}
+.du-an-list .swiper-slide .pic-intro {
+	position: relative;
+	margin: 0;
+	height: 350px;
+}
+.infor-du-an {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.4);
+	text-align: center;
+	color: #fff;
+	-webkit-transition: all .2s linear;
+    transition: all .2s linear;
+}
+.infor-du-an:hover {
+	background: rgba(0,0,0,0.2);
+}
+.infor-du-an:before {
+	content: '';
+	vertical-align: middle;
+	height: 100%;
+	width: 0;
+	display: inline-block;
+}
+.infor-du-an > div {
+	display: inline-block;
+	vertical-align: middle;
+}
+.infor-du-an .line-bt {
+	display: inline-block;
+	height: 1px;
+	background: #fff;
+	width: 80px;
 }

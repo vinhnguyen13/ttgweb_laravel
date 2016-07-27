@@ -307,21 +307,22 @@
                     </div>
 				</li> -->
 				<li>
-					<div class="dropdown-emu">
+					<div class="dropdown-emu dopdown-1">
 		            	<a class="val-selected clearfix" href="#">
-	                        <span class="txt-selected">Loại BĐS</span>
+	                        <span class="txt-selected" data-placeholder="Loại BĐS">Loại BĐS</span>
 	                        <span class="icon-caret-down"></span>
 	                    </a>
 	                    <div class="dropdown-up-style hide">
 	                    	<div class="item-dropdown">
 	                    		<ul class="clearfix">
-	                    			<li><a href="#">Căn hộ chung cư</a></li>
-	                    			<li><a href="#">Căn hộ chung cư</a></li>
-	                    			<li><a href="#">Căn hộ chung cư</a></li>
-	                    			<li><a href="#">Căn hộ chung cư</a></li>
-	                    			<li><a href="#">Căn hộ chung cư</a></li>
+	                    			<li><a href="#" data-value="1">Căn hộ chung cư 1</a></li>
+	                    			<li><a href="#" data-value="2">Căn hộ chung cư 2</a></li>
+	                    			<li><a href="#" data-value="3">Căn hộ chung cư 3</a></li>
+	                    			<li><a href="#" data-value="4">Căn hộ chung cư 4</a></li>
+	                    			<li><a href="#" data-value="5">Căn hộ chung cư 5</a></li>
 	                    		</ul>
 	                        </div>
+	                        <input type="hidden" name="" id="" value="">
 	                    </div>
                     </div>
 				</li>
@@ -343,76 +344,88 @@
                     </div>
 				</li> -->
 				<li>
-					<div class="dropdown-emu">
+					<div class="dropdown-emu dopdown-1">
 		            	<a class="val-selected clearfix" href="#">
-	                        <span class="txt-selected">0+ Phòng ngủ</span>
+	                        <span class="txt-selected" data-placeholder="Phòng ngủ"><span class="get-val"></span> Phòng ngủ</span>
 	                        <span class="icon-caret-down"></span>
 	                    </a>
 	                    <div class="dropdown-up-style hide">
 	                    	<div class="item-dropdown">
 	                    		<ul class="clearfix">
-	                    			<li><a href="#">+1</a></li>
-	                    			<li><a href="#">+2</a></li>
-	                    			<li><a href="#">+3</a></li>
-	                    			<li><a href="#">+4</a></li>
-	                    			<li><a href="#">+5</a></li>
-	                    			<li><a href="#">Bất kỳ</a></li>
+	                    			<li><a href="#" data-value="0">0+</a></li>
+	                    			<li><a href="#" data-value="1">1+</a></li>
+	                    			<li><a href="#" data-value="2">2+</a></li>
+	                    			<li><a href="#" data-value="3">3+</a></li>
+	                    			<li><a href="#" data-value="4">4+</a></li>
+	                    			<li><a href="#" data-value="5">5+</a></li>
 	                    		</ul>
 	                        </div>
+	                        <input type="hidden" name="" id="" value="0">
 	                    </div>
                     </div>
 				</li>
 				<li>
-					<div class="dropdown-emu">
+					<div class="dropdown-emu dopdown-1">
 		            	<a class="val-selected clearfix" href="#">
-	                        <span class="txt-selected">0+ Phòng tắm</span>
+	                        <span class="txt-selected" data-placeholder="0+ Phòng tắm"><span class="get-val"></span> Phòng tắm</span>
 	                        <span class="icon-caret-down"></span>
 	                    </a>
 	                    <div class="dropdown-up-style hide">
 	                    	<div class="item-dropdown">
 	                    		<ul class="clearfix">
-	                    			<li><a href="#">+1</a></li>
-	                    			<li><a href="#">+2</a></li>
-	                    			<li><a href="#">+3</a></li>
-	                    			<li><a href="#">+4</a></li>
-	                    			<li><a href="#">+5</a></li>
-	                    			<li><a href="#">Bất kỳ</a></li>
+	                    			<li><a href="#" data-value="0">0+</a></li>
+	                    			<li><a href="#" data-value="1">1+</a></li>
+	                    			<li><a href="#" data-value="2">2+</a></li>
+	                    			<li><a href="#" data-value="3">3+</a></li>
+	                    			<li><a href="#" data-value="4">4+</a></li>
+	                    			<li><a href="#" data-value="5">5+</a></li>
 	                    		</ul>
 	                        </div>
+	                        <input type="hidden" name="" id="" value="0">
 	                    </div>
                     </div>
 				</li>
 				<li>
-					<div class="dropdown-emu">
+					<div class="dropdown-emu  dopdown-2" data-item="dientich">
 		            	<a class="val-selected clearfix" href="#">
 	                        <span class="txt-selected">Diện tích</span>
 	                        <span class="icon-caret-down"></span>
 	                    </a>
-	                    <div class="dropdown-up-style hide">
+	                    <div class="dropdown-up-style hide dt-gia">
 	                    	<div class="item-dropdown">
-	                    		<ul class="clearfix">
-	                    			
-	                    		</ul>
+	                    		<div class="box-input clearfix">
+									<span class="txt-min-max active min-val" data-text="Thấp nhất" data-value="">Thấp nhất</span>
+									<span class="line-center"><span></span></span>
+									<span class="txt-min-max max-val" data-text="Cao nhất" data-value="">Cao nhất</span>
+									<input type="hidden" id="priceMin" name="price_min">												
+									<input type="hidden" id="priceMax" name="price_max">											
+								</div>
+	                    		<ul class="wrap-minmax clearfix"></ul>
 	                        </div>
 	                    </div>
                     </div>
 				</li>
 				<li>
-					<div class="dropdown-emu">
+					<div class="dropdown-emu  dopdown-2" data-item="gia">
 		            	<a class="val-selected clearfix" href="#">
 	                        <span class="txt-selected">Giá</span>
 	                        <span class="icon-caret-down"></span>
 	                    </a>
-	                    <div class="dropdown-up-style hide">
+	                    <div class="dropdown-up-style hide dt-gia">
 	                    	<div class="item-dropdown">
-	                    		<ul class="clearfix">
-	                    			
-	                    		</ul>
+	                    		<div class="box-input clearfix">
+									<span class="txt-min-max active min-val" data-text="Thấp nhất" data-value="">Thấp nhất</span>
+									<span class="line-center"><span></span></span>
+									<span class="txt-min-max max-val" data-text="Cao nhất" data-value="">Cao nhất</span>
+									<input type="hidden" id="priceMin" name="price_min">												
+									<input type="hidden" id="priceMax" name="price_max">											
+								</div>
+	                    		<ul class="wrap-minmax clearfix"></ul>
 	                        </div>
 	                    </div>
                     </div>
 				</li>
-				<li class="other-filter">
+				<li class="other-filter dopdown-1">
 					<div class="dropdown-emu">
 		            	<a class="val-selected clearfix" href="#">
 	                        <span class="txt-selected">Khác</span>
