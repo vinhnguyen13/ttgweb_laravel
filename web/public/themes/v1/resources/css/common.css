@@ -1297,6 +1297,7 @@ header,footer,#wrapper {
 }
 footer .infor-regis-web {
 	line-height: 25px;
+	position: relative;
 }
 footer .infor-regis-web p {
 	font-size: 14px;
@@ -1611,4 +1612,9 @@ input[type=checkbox], input[type=radio] {
 	.menu-footer li:first-child a {
 		border-bottom: 1px solid #fff;
 	}
+}
+.logo-bct {
+	position: absolute;
+	bottom: 0px;
+	right: 0;
 }

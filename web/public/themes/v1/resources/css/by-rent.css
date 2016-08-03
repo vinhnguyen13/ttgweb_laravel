@@ -16,6 +16,12 @@
     text-transform: uppercase;
     font-weight: 600;
 }
+.txt-show {
+    display: inline-block;
+}
+.txt-show .troxuong {
+    text-transform: lowercase;
+}
 .fillter-listing li .val-selected.active {
     color: #00a769;
 }
@@ -60,8 +66,8 @@ li.search-listing input:focus {
     color: #00a769;
     padding: 5px 7px;
 }
-.fillter-listing .item-dropdown ul {
-    
+.price-area .show-max {
+    text-align: right;
 }
 .fillter-listing .item-dropdown li a {
     display: block;
@@ -328,6 +334,7 @@ li.search-listing input:focus {
 .infor-detail {
     padding: 0 15px 0;
     font-size: 13px;
+    position: relative;
 }
 .infor-detail .address {
     font-size: 21px;
@@ -404,6 +411,7 @@ li.search-listing input:focus {
 }
 .infor-detail .txt-detail .btn-common {
     min-width: 25%;
+    font-size: 15px;
 }
 .list-tienich {
     margin-top: 30px;
@@ -461,7 +469,7 @@ li.search-listing input:focus {
     border: 1px solid #ccc;
     font-size: 14px;
     text-align: center;
-    padding: 8px 0;
+    padding: 6px 0;
     cursor: pointer;
 }
 .box-input .txt-min-max:hover,
@@ -472,7 +480,7 @@ li.search-listing input:focus {
 .box-input .line-center {
     width: 20%;
     line-height: 38px;
-    margin-top: 19px;
+    margin-top: 17px;
     text-align: center;
 }
 .box-input .line-center span {
@@ -481,6 +489,16 @@ li.search-listing input:focus {
     display: inline-block;
     width: 50%;
     float: none;
+}
+.attr-detail-listing {
+    border: 1px dotted #b3b3b3;
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 10px;
+    position: absolute;
+    top: 0;
+    right: 15px;
+    background: #f7f7f7;
 }
 @media (max-width: 1366px) {
     .listing-items {

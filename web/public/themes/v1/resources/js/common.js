@@ -182,3 +182,205 @@ function hideElOutSite (el, callBackItem) {
         }
     });
 }
+
+var renderPriceArea = {
+    valArea: 10,
+    valPrice: 0,
+    flagPrice: 0, // 0: gia mua, 1: gia thue,
+    itemRender: '',
+    flagToggle: 'min',
+    minVal: '',
+    maxVal: '',
+    unitAdd: '',
+    itemClickShowDropdown: '',
+    wrapTxtShow: '',
+    txtGetText: '',
+    init: function (item) {
+        renderPriceArea.itemRender = item;
+        renderPriceArea.itemClickShowDropdown = item.find('.val-selected');
+        renderPriceArea.txtGetText = renderPriceArea.itemClickShowDropdown.find('.txt-selected');
+        renderPriceArea.wrapTxtShow = item.find('.txt-show');
+        renderPriceArea.minVal = item.find('.min-val');
+        renderPriceArea.maxVal = item.find('.max-val');
+
+        renderPriceArea.checkPriceOrArea() ? renderPriceArea.unitAdd = 'm2' : renderPriceArea.unitAdd = '';
+
+        if ( renderPriceArea.itemRender.find('.wrap-minmax').hasClass('show-max') ) {
+            renderPriceArea.flagToggle = 'max';
+        }else {
+            renderPriceArea.flagToggle = 'min';
+            renderPriceArea.checkPriceOrArea() ? renderPriceArea.areaRender() : renderPriceArea.priceRender();
+        }
+
+        renderPriceArea.itemRender.find('.txt-min-max').unbind('click');
+        renderPriceArea.itemRender.find('.txt-min-max').on('click', function () {
+            renderPriceArea.toggleMinMax($(this));
+        });
+    },
+    updateHidden: function () {
+
+    },
+    checkPriceOrArea: function () {
+        var check = renderPriceArea.itemRender.data('item') == 'dientich' ? true : false;
+        return check;
+    },
+    priceRender: function () {
+        var priceFirst = 0; 
+
+        if ( !renderPriceArea.flagPrice ) {
+            priceFirst = 1000000000; // 1ty
+        }else {
+            priceFirst = 1000000; // 1trieu
+        }
+
+        renderPriceArea.valPrice = priceFirst;
+        
+        renderPriceArea.renderVal(priceFirst);
+    },
+    areaRender: function () {
+        renderPriceArea.renderVal(renderPriceArea.valArea);
+    },
+    renderVal: function (num) {
+        var numAdd,
+            valLoop = 10;
+
+        renderPriceArea.itemRender.find('.wrap-minmax').html('');
+
+        console.log(renderPriceArea.flagToggle);
+
+        renderPriceArea.flagToggle == 'min' ? numAdd = 0 : numAdd = num;
+        renderPriceArea.flagToggle == 'min' ? valLoop = 11 : valLoop = 10;
+
+        for ( var i = 0; i < valLoop; i++ ) {
+            var itemRender = $('<li><a href="#" data-number="'+numAdd+'">'+formatPrice(numAdd.toString())+renderPriceArea.unitAdd+'</a></li>');
+            renderPriceArea.selectVal(itemRender);
+            renderPriceArea.itemRender.find('.wrap-minmax').append(itemRender);
+            numAdd += renderPriceArea.checkPriceOrArea() ? renderPriceArea.valArea : renderPriceArea.valPrice;
+
+            if ( i+1 == valLoop && renderPriceArea.flagToggle == 'max' ) {
+                itemRender = $('<li><a href="#" data-number="-1">Giá trị bất kỳ</a></li>');
+                renderPriceArea.selectVal(itemRender);
+                renderPriceArea.itemRender.find('.wrap-minmax').append(itemRender);
+            }
+        }
+    },
+    selectVal: function (item) {
+        item.find('a').on('click', function (e) {
+            e.stopPropagation();
+            e.preventDefault();
+            var _this = $(this),
+                valData = _this.data('number');
+
+            renderPriceArea.renderTextShow(valData);
+
+            if ( renderPriceArea.flagToggle == 'min' ) {
+                renderPriceArea.toggleMinMax();
+            }
+        });
+    },
+    renderTextShow: function (valData) {
+        renderPriceArea.txtGetText.hide();
+        var txt = formatPrice(valData.toString())+renderPriceArea.unitAdd,
+            txtMaxDefaultMax = renderPriceArea.maxVal.data('text'),
+            txtMaxDefaultMin = renderPriceArea.minVal.data('text');
+
+        renderPriceArea.saveInputHidden(renderPriceArea.flagToggle, valData);
+
+        if ( renderPriceArea.minVal.data('value') > 0 && renderPriceArea.maxVal.data('value') > 0 ) {
+            renderPriceArea.maxVal.text(txt);
+
+            renderPriceArea.wrapTxtShow.find('.trolen').addClass('hide');
+            renderPriceArea.wrapTxtShow.find('.den').removeClass('hide');
+            renderPriceArea.wrapTxtShow.find('.wrap-max').removeClass('hide').text(txt);
+
+            renderPriceArea.itemClickShowDropdown.trigger('click');
+        }else if ( renderPriceArea.minVal.data('value') > 0 && renderPriceArea.maxVal.data('value') == '' ) {
+            if ( valData < 0 ) {
+                renderPriceArea.maxVal.text(txtMaxDefaultMax);
+                renderPriceArea.wrapTxtShow.find('.trolen').removeClass('hide');
+                renderPriceArea.wrapTxtShow.find('.wrap-max').addClass('hide');
+                renderPriceArea.wrapTxtShow.find('.den').addClass('hide');
+                renderPriceArea.itemClickShowDropdown.trigger('click');
+                return;
+            }
+            renderPriceArea.maxVal.text(txtMaxDefaultMax);
+            renderPriceArea.minVal.text(txt);
+
+            renderPriceArea.wrapTxtShow.find('.trolen').removeClass('hide');
+            renderPriceArea.wrapTxtShow.find('.wrap-max').addClass('hide');
+            renderPriceArea.wrapTxtShow.find('.den').addClass('hide');
+            renderPriceArea.wrapTxtShow.find('.troxuong').addClass('hide');
+            renderPriceArea.wrapTxtShow.find('.wrap-min').removeClass('hide').text(txt);
+        }else if ( renderPriceArea.minVal.data('value') == '' && renderPriceArea.maxVal.data('value') > 0 ) {
+            renderPriceArea.maxVal.text(txt);
+            renderPriceArea.wrapTxtShow.find('.trolen').addClass('hide');
+            renderPriceArea.wrapTxtShow.find('.den').addClass('hide');
+            renderPriceArea.wrapTxtShow.find('.wrap-min').addClass('hide');
+
+            renderPriceArea.wrapTxtShow.find('.wrap-max').removeClass('hide').text(txt);
+            renderPriceArea.wrapTxtShow.find('.troxuong').removeClass('hide');
+            renderPriceArea.itemClickShowDropdown.trigger('click');
+        }else if ( renderPriceArea.minVal.data('value') > 0 && renderPriceArea.maxVal.data('value') < 0 ) {
+            alert(1);
+            renderPriceArea.saveInputHidden(renderPriceArea.flagToggle, '');
+            renderPriceArea.maxVal.text(txtMaxDefaultMax);
+            renderPriceArea.wrapTxtShow.find('.trolen').removeClass('hide');
+            renderPriceArea.wrapTxtShow.find('.wrap-max').addClass('hide');
+            renderPriceArea.wrapTxtShow.find('.den').addClass('hide');
+            renderPriceArea.itemClickShowDropdown.trigger('click');
+        }else {
+            renderPriceArea.txtGetText.show();
+            renderPriceArea.maxVal.text(txtMaxDefaultMax);
+            renderPriceArea.minVal.text(txtMaxDefaultMin);
+            renderPriceArea.wrapTxtShow.find('.trolen').addClass('hide');
+            renderPriceArea.wrapTxtShow.find('.den').addClass('hide');
+            renderPriceArea.wrapTxtShow.find('.wrap-min').addClass('hide');
+            renderPriceArea.wrapTxtShow.find('.wrap-max').addClass('hide');
+            renderPriceArea.wrapTxtShow.find('.troxuong').addClass('hide');
+            if ( renderPriceArea.flagToggle == 'max' ) {
+                renderPriceArea.itemClickShowDropdown.trigger('click');
+            }
+        }
+    },
+    toggleMinMax: function (item) {
+        if ( item != undefined ) {
+            if ( renderPriceArea.flagToggle == 'min' && item.hasClass('min-val') ) return;
+            if ( renderPriceArea.flagToggle == 'max' && item.hasClass('max-val') ) return;
+        }
+        renderPriceArea.itemRender.find('.txt-min-max').removeClass('active');
+        if ( renderPriceArea.flagToggle == 'min' ) {
+            renderPriceArea.itemRender.find('.wrap-minmax').addClass('show-max');
+            renderPriceArea.maxVal.addClass('active');
+            renderPriceArea.flagToggle = 'max';
+
+            if ( renderPriceArea.minVal.data('value') != '' ) {
+                var numAdd = renderPriceArea.minVal.data('value') + (renderPriceArea.checkPriceOrArea() ? renderPriceArea.valArea : renderPriceArea.valPrice);
+                renderPriceArea.renderVal(numAdd);
+            }else {
+                renderPriceArea.checkPriceOrArea() ? renderPriceArea.areaRender() : renderPriceArea.priceRender();
+            }
+        }else {
+            renderPriceArea.flagToggle = 'min';
+            renderPriceArea.checkPriceOrArea() ? renderPriceArea.areaRender() : renderPriceArea.priceRender();
+            renderPriceArea.itemRender.find('.wrap-minmax').removeClass('show-max');
+            renderPriceArea.minVal.addClass('active');
+        }
+    },
+    saveInputHidden: function (flagMinMax, val) {
+        var iputMin = renderPriceArea.itemRender.find ('input[name=min]'),
+            iputMax = renderPriceArea.itemRender.find ('input[name=max]');
+
+        if ( val == 0 || val < 0 ) {
+            val = '';
+        }
+        if ( flagMinMax == 'min' ) {
+            iputMin.val(val).trigger('change');
+            renderPriceArea.minVal.data('value', val);
+            iputMax.val('').trigger('change');
+            renderPriceArea.maxVal.data('value', '');
+        }else {
+            iputMax.val(val).trigger('change');
+            renderPriceArea.maxVal.data('value', val);
+        }
+    }
+}

@@ -386,10 +386,17 @@
                     </div>
 				</li>
 				<li>
-					<div class="dropdown-emu  dopdown-2" data-item="dientich">
+					<div class="dropdown-emu  dopdown-2 price-area" data-item="dientich">
 		            	<a class="val-selected clearfix" href="#">
-	                        <span class="txt-selected">Diện tích</span>
-	                        <span class="icon-caret-down"></span>
+	                        <span class="txt-selected" data-text="Diện tích">Diện tích</span>
+	                        <div class="txt-show">
+								<span class="wrap-min hide"></span>
+								<span class="trolen hide">+</span>
+								<span class="den hide">-</span>
+								<span class="wrap-max hide"></span>
+								<span class="troxuong hide">trở xuống</span>
+							</div>
+							<span class="icon-caret-down"></span>
 	                    </a>
 	                    <div class="dropdown-up-style hide dt-gia">
 	                    	<div class="item-dropdown">
@@ -397,8 +404,8 @@
 									<span class="txt-min-max active min-val" data-text="Thấp nhất" data-value="">Thấp nhất</span>
 									<span class="line-center"><span></span></span>
 									<span class="txt-min-max max-val" data-text="Cao nhất" data-value="">Cao nhất</span>
-									<input type="hidden" id="priceMin" name="price_min">												
-									<input type="hidden" id="priceMax" name="price_max">											
+									<input type="hidden" class="hidden-min" name="min">												
+									<input type="hidden" class="hidden-max" name="max">										
 								</div>
 	                    		<ul class="wrap-minmax clearfix"></ul>
 	                        </div>
@@ -406,9 +413,16 @@
                     </div>
 				</li>
 				<li>
-					<div class="dropdown-emu  dopdown-2" data-item="gia">
+					<div class="dropdown-emu dopdown-2 price-area" data-item="gia">
 		            	<a class="val-selected clearfix" href="#">
 	                        <span class="txt-selected">Giá</span>
+	                        <div class="txt-show">
+								<span class="wrap-min hide"></span>
+								<span class="trolen hide">+</span>
+								<span class="den hide">-</span>
+								<span class="wrap-max hide"></span>
+								<span class="troxuong hide">trở xuống</span>
+							</div>
 	                        <span class="icon-caret-down"></span>
 	                    </a>
 	                    <div class="dropdown-up-style hide dt-gia">
@@ -417,16 +431,16 @@
 									<span class="txt-min-max active min-val" data-text="Thấp nhất" data-value="">Thấp nhất</span>
 									<span class="line-center"><span></span></span>
 									<span class="txt-min-max max-val" data-text="Cao nhất" data-value="">Cao nhất</span>
-									<input type="hidden" id="priceMin" name="price_min">												
-									<input type="hidden" id="priceMax" name="price_max">											
+									<input type="hidden" class="hidden-min" name="min">												
+									<input type="hidden" class="hidden-max" name="max">											
 								</div>
 	                    		<ul class="wrap-minmax clearfix"></ul>
 	                        </div>
 	                    </div>
                     </div>
 				</li>
-				<li class="other-filter dopdown-1">
-					<div class="dropdown-emu">
+				<li class="other-filter">
+					<div class="dropdown-emu dopdown-1">
 		            	<a class="val-selected clearfix" href="#">
 	                        <span class="txt-selected">Khác</span>
 	                        <span class="icon-caret-down"></span>
@@ -822,7 +836,7 @@
 						<p class="infor-by-up">Nhà riêng Bán bởi <strong>Chủ nhà</strong></p>
 						<p class="address">12, Đường Phạm Ngũ Lão, Phường Bến Thành, Quận 1, Hồ Chí Minh</p>
 					</div>
-					<div class="pull-left w-30 mgT-15">
+					<div class="pull-left w-30 attr-detail-listing">
 						<p class="id-duan">ID:<span>MV25849</span></p>
 						<ul class="clearfix attr-detail">
 							<li>
@@ -838,7 +852,7 @@
 						<p class="price-item">10 million vnd</p>
 					</div>
 				</div>
-				<div class="txt-detail">
+				<div class="txt-detail w-70 pdR-20">
 					<p class="title-attr">Mô tả</p>
 					<p>
 						Vỡ nợ bán gấp mặt tiền Hai Bà Trưng, P.Tân Định, Q1. DT= 4mx20m, giá 16.5 tỷ <br>
@@ -915,8 +929,8 @@
 								<span class="txt-small-note">1000 remaining</span>
 							</div>
 						</div>
-						<div class="col-xs-12 text-center">
-							<button class="btn-common">Submit</button>
+						<div class="col-xs-12 text-center mgT-30">
+							<button class="btn-common btn-bd-radius text-uper fs-20">Submit</button>
 						</div>
 					</div>
 				</div>
@@ -1215,6 +1229,7 @@
 
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script src="js/string-helper.js"></script>
 	<script src="js/velocity.js"></script>
 	<script src="js/common.js"></script>
     <script type="text/javascript" src="js/jquery.slimscroll.min.js"></script>
