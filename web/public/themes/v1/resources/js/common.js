@@ -246,7 +246,7 @@ var renderPriceArea = {
 
         renderPriceArea.itemRender.find('.wrap-minmax').html('');
 
-        console.log(renderPriceArea.flagToggle);
+        //console.log(renderPriceArea.flagToggle);
 
         renderPriceArea.flagToggle == 'min' ? numAdd = 0 : numAdd = num;
         renderPriceArea.flagToggle == 'min' ? valLoop = 11 : valLoop = 10;
@@ -319,14 +319,6 @@ var renderPriceArea = {
 
             renderPriceArea.wrapTxtShow.find('.wrap-max').removeClass('hide').text(txt);
             renderPriceArea.wrapTxtShow.find('.troxuong').removeClass('hide');
-            renderPriceArea.itemClickShowDropdown.trigger('click');
-        }else if ( renderPriceArea.minVal.data('value') > 0 && renderPriceArea.maxVal.data('value') < 0 ) {
-            alert(1);
-            renderPriceArea.saveInputHidden(renderPriceArea.flagToggle, '');
-            renderPriceArea.maxVal.text(txtMaxDefaultMax);
-            renderPriceArea.wrapTxtShow.find('.trolen').removeClass('hide');
-            renderPriceArea.wrapTxtShow.find('.wrap-max').addClass('hide');
-            renderPriceArea.wrapTxtShow.find('.den').addClass('hide');
             renderPriceArea.itemClickShowDropdown.trigger('click');
         }else {
             renderPriceArea.txtGetText.show();
