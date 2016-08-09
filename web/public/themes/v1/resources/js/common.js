@@ -87,6 +87,7 @@ $.fn.dropdown = function (options) {
     return this.each(function() {
         var defaults = {
             selectedValue: false,
+            load: function() {},
             beforeOpen: function() {},
             closeCallBack: function() {}
         },
@@ -104,12 +105,18 @@ $.fn.dropdown = function (options) {
 
         showSortLoad();
 
+        //sc.settings.load(el);
+
         if ( sc.settings.selectedValue ) {
             selectItem();
         }
         
         // set value input when reload page
         function showSortLoad () {
+            if ( el.hasClass('price-area') ) {
+                renderPriceArea.updateHidden(el);
+                return;
+            }
             if ( el.find('input[type=hidden]').val() != '' ) {
                 var valInputHidden = el.find('input[type=hidden]').val();
                 itemDropClick.each(function () {
@@ -195,8 +202,12 @@ var renderPriceArea = {
     itemClickShowDropdown: '',
     wrapTxtShow: '',
     txtGetText: '',
+    iputMinHidden: '',
+    iputMaxHidden: '',
     init: function (item) {
         renderPriceArea.itemRender = item;
+        renderPriceArea.iputMinHidden = renderPriceArea.itemRender.find ('input[name=min]');
+        renderPriceArea.iputMaxHidden = renderPriceArea.itemRender.find ('input[name=max]');
         renderPriceArea.itemClickShowDropdown = item.find('.val-selected');
         renderPriceArea.txtGetText = renderPriceArea.itemClickShowDropdown.find('.txt-selected');
         renderPriceArea.wrapTxtShow = item.find('.txt-show');
@@ -217,8 +228,9 @@ var renderPriceArea = {
             renderPriceArea.toggleMinMax($(this));
         });
     },
-    updateHidden: function () {
-
+    updateHidden: function (item) {
+        renderPriceArea.init(item);
+        renderPriceArea.renderTextShow();
     },
     checkPriceOrArea: function () {
         var check = renderPriceArea.itemRender.data('item') == 'dientich' ? true : false;
@@ -252,6 +264,7 @@ var renderPriceArea = {
         renderPriceArea.flagToggle == 'min' ? valLoop = 11 : valLoop = 10;
 
         for ( var i = 0; i < valLoop; i++ ) {
+            
             var itemRender = $('<li><a href="#" data-number="'+numAdd+'">'+formatPrice(numAdd.toString())+renderPriceArea.unitAdd+'</a></li>');
             renderPriceArea.selectVal(itemRender);
             renderPriceArea.itemRender.find('.wrap-minmax').append(itemRender);
@@ -271,6 +284,8 @@ var renderPriceArea = {
             var _this = $(this),
                 valData = _this.data('number');
 
+            renderPriceArea.saveInputHidden(renderPriceArea.flagToggle, valData);
+
             renderPriceArea.renderTextShow(valData);
 
             if ( renderPriceArea.flagToggle == 'min' ) {
@@ -280,46 +295,51 @@ var renderPriceArea = {
     },
     renderTextShow: function (valData) {
         renderPriceArea.txtGetText.hide();
-        var txt = formatPrice(valData.toString())+renderPriceArea.unitAdd,
-            txtMaxDefaultMax = renderPriceArea.maxVal.data('text'),
-            txtMaxDefaultMin = renderPriceArea.minVal.data('text');
+        var txtMaxDefaultMax = renderPriceArea.maxVal.data('text'),
+            txtMaxDefaultMin = renderPriceArea.minVal.data('text'),
+            valMinHidden = renderPriceArea.iputMinHidden.val(),
+            valMaxHidden = renderPriceArea.iputMaxHidden.val();
 
-        renderPriceArea.saveInputHidden(renderPriceArea.flagToggle, valData);
-
-        if ( renderPriceArea.minVal.data('value') > 0 && renderPriceArea.maxVal.data('value') > 0 ) {
-            renderPriceArea.maxVal.text(txt);
+        if ( valMinHidden > 0 && valMaxHidden > 0 ) {
+            var txtMin = formatPrice(valMinHidden.toString())+renderPriceArea.unitAdd,
+                txtMax = formatPrice(valMaxHidden.toString())+renderPriceArea.unitAdd;
+            renderPriceArea.maxVal.text(txtMax);
+            renderPriceArea.minVal.text(txtMin);
 
             renderPriceArea.wrapTxtShow.find('.trolen').addClass('hide');
             renderPriceArea.wrapTxtShow.find('.den').removeClass('hide');
-            renderPriceArea.wrapTxtShow.find('.wrap-max').removeClass('hide').text(txt);
+            renderPriceArea.wrapTxtShow.find('.wrap-min').removeClass('hide').text(txtMin);
+            renderPriceArea.wrapTxtShow.find('.wrap-max').removeClass('hide').text(txtMax);
 
-            renderPriceArea.itemClickShowDropdown.trigger('click');
-        }else if ( renderPriceArea.minVal.data('value') > 0 && renderPriceArea.maxVal.data('value') == '' ) {
+            if ( valData != undefined )  renderPriceArea.itemClickShowDropdown.trigger('click');
+        }else if ( valMinHidden > 0 && valMaxHidden == '' ) {
+            var txtMin = formatPrice(valMinHidden.toString())+renderPriceArea.unitAdd;
             if ( valData < 0 ) {
                 renderPriceArea.maxVal.text(txtMaxDefaultMax);
                 renderPriceArea.wrapTxtShow.find('.trolen').removeClass('hide');
                 renderPriceArea.wrapTxtShow.find('.wrap-max').addClass('hide');
                 renderPriceArea.wrapTxtShow.find('.den').addClass('hide');
-                renderPriceArea.itemClickShowDropdown.trigger('click');
+                if ( valData != undefined )  renderPriceArea.itemClickShowDropdown.trigger('click');
                 return;
             }
             renderPriceArea.maxVal.text(txtMaxDefaultMax);
-            renderPriceArea.minVal.text(txt);
+            renderPriceArea.minVal.text(txtMin);
 
             renderPriceArea.wrapTxtShow.find('.trolen').removeClass('hide');
             renderPriceArea.wrapTxtShow.find('.wrap-max').addClass('hide');
             renderPriceArea.wrapTxtShow.find('.den').addClass('hide');
             renderPriceArea.wrapTxtShow.find('.troxuong').addClass('hide');
-            renderPriceArea.wrapTxtShow.find('.wrap-min').removeClass('hide').text(txt);
-        }else if ( renderPriceArea.minVal.data('value') == '' && renderPriceArea.maxVal.data('value') > 0 ) {
-            renderPriceArea.maxVal.text(txt);
+            renderPriceArea.wrapTxtShow.find('.wrap-min').removeClass('hide').text(txtMin);
+        }else if ( valMinHidden == '' && valMaxHidden > 0 ) {
+            var txtMax = formatPrice(valMaxHidden.toString())+renderPriceArea.unitAdd;
+            renderPriceArea.maxVal.text(txtMax);
             renderPriceArea.wrapTxtShow.find('.trolen').addClass('hide');
             renderPriceArea.wrapTxtShow.find('.den').addClass('hide');
             renderPriceArea.wrapTxtShow.find('.wrap-min').addClass('hide');
 
-            renderPriceArea.wrapTxtShow.find('.wrap-max').removeClass('hide').text(txt);
+            renderPriceArea.wrapTxtShow.find('.wrap-max').removeClass('hide').text(txtMax);
             renderPriceArea.wrapTxtShow.find('.troxuong').removeClass('hide');
-            renderPriceArea.itemClickShowDropdown.trigger('click');
+            if ( valData != undefined ) renderPriceArea.itemClickShowDropdown.trigger('click');
         }else {
             renderPriceArea.txtGetText.show();
             renderPriceArea.maxVal.text(txtMaxDefaultMax);
@@ -330,7 +350,7 @@ var renderPriceArea = {
             renderPriceArea.wrapTxtShow.find('.wrap-max').addClass('hide');
             renderPriceArea.wrapTxtShow.find('.troxuong').addClass('hide');
             if ( renderPriceArea.flagToggle == 'max' ) {
-                renderPriceArea.itemClickShowDropdown.trigger('click');
+                if ( valData != undefined )  renderPriceArea.itemClickShowDropdown.trigger('click');
             }
         }
     },
@@ -359,19 +379,16 @@ var renderPriceArea = {
         }
     },
     saveInputHidden: function (flagMinMax, val) {
-        var iputMin = renderPriceArea.itemRender.find ('input[name=min]'),
-            iputMax = renderPriceArea.itemRender.find ('input[name=max]');
-
         if ( val == 0 || val < 0 ) {
             val = '';
         }
         if ( flagMinMax == 'min' ) {
-            iputMin.val(val).trigger('change');
+            renderPriceArea.iputMinHidden.val(val).trigger('change');
             renderPriceArea.minVal.data('value', val);
-            iputMax.val('').trigger('change');
+            renderPriceArea.iputMaxHidden.val('').trigger('change');
             renderPriceArea.maxVal.data('value', '');
         }else {
-            iputMax.val(val).trigger('change');
+            renderPriceArea.iputMaxHidden.val(val).trigger('change');
             renderPriceArea.maxVal.data('value', val);
         }
     }

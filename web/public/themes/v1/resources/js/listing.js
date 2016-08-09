@@ -23,7 +23,7 @@ $(window).on('load', function () {
 			});
 		},
 		closeCallBack: function (item) {
-			console.log(item);
+			
 		}
 	});
 
