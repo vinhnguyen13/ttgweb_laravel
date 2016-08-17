@@ -187,6 +187,7 @@
     width: 25%;
     margin-bottom: 10px;
     padding-right: 5px;
+    position: relative;
 }
 .tienich-frm li label {
     white-space: nowrap;

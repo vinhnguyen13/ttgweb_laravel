@@ -393,10 +393,10 @@
 												<span class="small-text">VD: 1,5 triệu hoặc 1,5 tỷ</span>
 												<div class="price-unit">
 													<label class="radio-inline radio-ui active">
-														<input type="radio" checked="checked"> million VND
+														<input type="radio" checked="checked" name="unit-price"> million VND
 													</label>
 													<label class="radio-inline radio-ui">
-														<input type="radio"> billion VND
+														<input type="radio" name="unit-price"> billion VND
 													</label>
 												</div>
 											</div>
@@ -809,7 +809,13 @@
 		});
 	</script>
 	<!-- InstanceBeginEditable name="EditRegion2" -->
-	
+	<script>
+		$(document).ready(function () {
+			$('.tienich-frm .checkbox-ui').checkbox_ui();
+			$('.fild-address .checkbox-ui').checkbox_ui();
+			$('.radio-ui').radio_ui();
+		});
+	</script>
 	<!-- InstanceEndEditable -->
 </body>
 <!-- InstanceEnd --></html>

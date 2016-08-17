@@ -78,7 +78,12 @@ li.search-listing input:focus {
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
+    border-bottom: 1px solid #fff;
 }
+.fillter-listing .item-dropdown li:last-child a {
+    border-bottom: none;
+}
+.fillter-listing .item-dropdown li a.active,
 .fillter-listing .item-dropdown li a:hover {
     /* background: rgba(0, 148, 85, 0.06); */
     background: #26A05E;

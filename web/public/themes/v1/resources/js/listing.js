@@ -1,8 +1,9 @@
 $(window).on('load', function () {
 
 	$('.fillter-listing > ul > li .dopdown-1').dropdown({
+		selectedValue: true,
 		beforeOpen: function (item) {
-			var itemClick = item.find('.val-selected'),
+			/*var itemClick = item.find('.val-selected'),
 		        txtItemClick = itemClick.find('.txt-selected'),
 		        itemDropClick = item.find('.item-dropdown a');
 
@@ -20,7 +21,7 @@ $(window).on('load', function () {
 				}
 				item.find('input[type=hidden]').val(valSelected);
 				itemClick.trigger('click');
-			});
+			});*/
 		},
 		closeCallBack: function (item) {
 			

@@ -130,6 +130,7 @@ $.fn.dropdown = function (options) {
                         }else {
                             txtItemClick.text(txtItem);
                         }
+                        //_this.addClass('active');
                     }
                 });
             }
@@ -159,13 +160,21 @@ $.fn.dropdown = function (options) {
 
         // show item when click in dropdown
         function selectItem () {
+            itemDropClick.unbind('click');
             itemDropClick.on('click', function (e) {
                 e.preventDefault();
                 var _this = $(this),
-                    dataVal = _this.data('value'),
-                    txtClick = _this.text();
-                txtItemClick.text(txtClick);
-                el.find('input[type=hidden]').val(dataVal);
+                    txtClick = _this.text(),
+                    valSelected = _this.data('value');
+
+                itemDropClick.removeClass('active');
+                _this.addClass('active');
+                if ( itemClick.find('.get-val').length ) {
+                    itemClick.find('.get-val').text(txtClick);
+                }else {
+                    txtItemClick.text(txtClick);
+                }
+                el.find('input[type=hidden]').val(valSelected);
                 itemClick.trigger('click');
             });
         }
@@ -193,6 +202,8 @@ function hideElOutSite (el, callBackItem) {
 var renderPriceArea = {
     valArea: 10,
     valPrice: 0,
+    arrPriceAdd: [20000000, 30000000, 40000000, 50000000], // trieu
+    arrAreaAdd: [200, 300, 400, 500],
     flagPrice: 0, // 0: gia mua, 1: gia thue,
     itemRender: '',
     flagToggle: 'min',
@@ -254,17 +265,20 @@ var renderPriceArea = {
     },
     renderVal: function (num) {
         var numAdd,
-            valLoop = 10;
+            valLoop = 10,
+            tempArr = 0;
 
         renderPriceArea.itemRender.find('.wrap-minmax').html('');
-
-        //console.log(renderPriceArea.flagToggle);
 
         renderPriceArea.flagToggle == 'min' ? numAdd = 0 : numAdd = num;
         renderPriceArea.flagToggle == 'min' ? valLoop = 11 : valLoop = 10;
 
+        if ( renderPriceArea.arrAreaAdd.length > 0 || renderPriceArea.arrPriceAdd.length > 0 ) {
+            valLoop += 4;
+        }
+
         for ( var i = 0; i < valLoop; i++ ) {
-            
+
             var itemRender = $('<li><a href="#" data-number="'+numAdd+'">'+formatPrice(numAdd.toString())+renderPriceArea.unitAdd+'</a></li>');
             renderPriceArea.selectVal(itemRender);
             renderPriceArea.itemRender.find('.wrap-minmax').append(itemRender);
@@ -274,6 +288,18 @@ var renderPriceArea = {
                 itemRender = $('<li><a href="#" data-number="-1">Giá trị bất kỳ</a></li>');
                 renderPriceArea.selectVal(itemRender);
                 renderPriceArea.itemRender.find('.wrap-minmax').append(itemRender);
+            }
+
+            if ( renderPriceArea.checkPriceOrArea() && renderPriceArea.flagToggle == 'min' && i+1 > 10 ) { // dien tich
+                numAdd = renderPriceArea.arrAreaAdd[tempArr];
+            }else if ( renderPriceArea.flagToggle == 'min' && renderPriceArea.flagPrice && i+1 > 10 ) { // gia thue
+                numAdd = renderPriceArea.arrPriceAdd[tempArr];
+            }else if ( renderPriceArea.flagToggle == 'min' && i+1 > 10 ) { // gia mua
+                numAdd = renderPriceArea.arrPriceAdd[tempArr]*1000 ;
+            }
+
+            if ( i+1 > 10 && tempArr+1 < 4 ) {
+                tempArr += 1;
             }
         }
     },
@@ -392,4 +418,125 @@ var renderPriceArea = {
             renderPriceArea.maxVal.data('value', val);
         }
     }
+}
+
+$.fn.checkbox_ui = function (options) {
+
+    return this.each(function() {
+        var defaults = {
+            checked: false,
+            unchecked: false,
+            disable: false,
+            enable: false,
+            done: function(){}
+        },
+        sc = {},
+        el = $(this);
+
+        if ( el.length == 0 ) return el;
+
+        sc.settings = $.extend({}, defaults, options);
+
+        if ( el.find('input[type=checkbox]').attr('checked') ) {
+            el.addClass('active');
+        }
+
+        if ( el.find('input[type=checkbox]').attr('disabled') ) {
+            el.addClass('disabled-rc');
+        }
+
+        if ( sc.settings.checked ) {
+            el.find('input[type=checkbox]').prop("checked", true);
+            checkedItem(el, true);
+        }
+
+        if ( sc.settings.unchecked ) {
+            el.find('input[type=checkbox]').prop("checked", false);
+            checkedItem(el, false);
+        }
+
+        if ( sc.settings.disable ) {
+            el.addClass('disabled-rc');
+        }
+
+        if ( sc.settings.enable ) {
+            el.removeClass('disabled-rc');
+        }
+
+        el.unbind('click');
+        el.on('click', toggleCheck);
+
+        function toggleCheck (e) {
+            e.preventDefault();
+            var _this = $(this);
+            if ( _this.hasClass('disabled-rc') ) return;
+            if ( _this.find('input[type=checkbox]').prop("checked") ) {
+                _this.find('input[type=checkbox]').prop("checked", false);
+                checkedItem(_this, false);
+            }else {
+                _this.find('input[type=checkbox]').prop("checked", true);
+                checkedItem(_this, true);
+            }
+            _this.find('input[type=checkbox]').trigger('change');
+
+            sc.settings.done(_this.find('input[type=checkbox]')); // CALLBACK
+        }
+
+        function checkedItem (item, flagChecked) {
+            if ( flagChecked ) {
+                item.addClass('active');
+            }else {
+                item.removeClass('active');
+            }
+        }
+
+    });
+}
+
+$.fn.radio_ui = function (options) {
+
+    return this.each(function() {
+        var defaults = {
+            done: function(){}
+        },
+        sc = {},
+        el = $(this);
+
+        if ( el.length == 0 ) return el;
+
+        sc.settings = $.extend({}, defaults, options);
+
+        el.on('click', toggleCheck);
+
+        if ( el.find('input').attr('checked') ) {
+            el.addClass('active');
+        }
+
+        function toggleCheck (e) {
+            e.preventDefault();
+            var _this = $(this),
+                nameGroup = _this.find('input').attr('name');
+
+            $('input[name="'+nameGroup+'"]').prop("checked", false);
+            $('input[name="'+nameGroup+'"]').closest('.radio-ui').removeClass('active');
+
+            if ( _this.find('input[type=radio]').prop("checked") ) {
+                _this.find('input[type=radio]').prop("checked", false);
+                checkedItem(_this, false);
+            }else {
+                _this.find('input[type=radio]').prop("checked", true);
+                checkedItem(_this, true);
+            }
+
+            sc.settings.done(_this.find('input'));
+        }
+        function checkedItem (item, flagChecked) {
+            if ( flagChecked ) {
+                item.addClass('active');
+            }else {
+                item.removeClass('active');
+            }
+        }
+
+    });
 }

@@ -1244,6 +1244,11 @@ header,footer,#wrapper {
 .checkbox-ui.active .icon-checkbox:before {
     content: "\f046";
 }
+.disabled-rc:hover,
+.disabled-rc {
+    opacity: .7;
+    cursor: not-allowed;
+}
 .list-item li a {
 	display: block;
 	position: relative;
