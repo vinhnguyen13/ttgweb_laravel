@@ -24,6 +24,9 @@
     -moz-osx-font-smoothing: grayscale;
     vertical-align: middle;
 }
+.icon-balance-scale:before {
+    content: "\f24e";
+}
 .icon-circle-check:before {
     content: "\e042";
 }

@@ -121,7 +121,7 @@ header {
 	-moz-box-shadow: 0 1px 0 0 #DEDEDE;
 	-ms-box-shadow: 0 1px 0 0 #DEDEDE;
 	height: 55px;
-	border-bottom: solid 0.5px #b1b1b1;
+	/* border-bottom: solid 0.5px #b1b1b1; */
 	position: fixed;
 	width: 100%;
 	background: #fff;
@@ -143,7 +143,8 @@ header {
 	display: block;
 	line-height: 55px;
 	text-transform: uppercase;
-	padding: 0 20px;
+	padding: 0 15px;
+	font-size: 15px;
 }
 .list-menu li a:hover {
 	color: #00a769;
@@ -194,8 +195,6 @@ header {
 	line-height: 18px;
 }
 .user-ui-desktop li.option-user .wrap-img {
-	float: left;
-	margin-right: 8px;
 	width: 40px;
 	height: 40px;
 }
@@ -217,21 +216,21 @@ header {
 	font-weight: 600;
 }
 .avatar {
-	padding: 2px;
-	border: 1px solid #4CB67C;
 	display: inline-block;
+	border-radius: 3px;
+	overflow: hidden;
 }
 .avatar img {
 	max-width: 100%;
 }
 .noti-alert {
 	position: absolute;
-	top: 10px;
+	top: 8px;
 	right: 5px;
 	line-height: 100%;
-	font-size: 12px;
+	font-size: 11px;
 	background: red;
-	padding: 3px;
+	padding: 2px 3px;
 	border-radius: 3px;
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
@@ -290,15 +289,30 @@ header {
 .pic-intro {
 	position: relative;
 	display: block;
-	margin-bottom: 8px;
 	width: 100%;
-	height: 245px;
+	height: 100%;
+	text-align: center;
 }
 .pic-intro img {
-	width: 100%;
+	width: 100%; 
 	height: 100%;
 	-o-object-fit: cover;
 	object-fit: cover;
+}
+.slide-detail .pic-intro img {
+	width: auto;
+	height: auto;
+	max-width: 100%;
+	max-height: 100%;
+	object-fit: inherit;
+	-o-object-fit: inherit;
+}
+.slide-detail .pic-intro:before {
+	display: inline-block;
+	vertical-align: middle;
+	content: '';
+	height: 100%;
+	margin: 0 0 0 -5px;
 }
 .type-item {
 	position: absolute;
@@ -321,6 +335,9 @@ header {
 	-ms-text-shadow: 1px 1px 1px #fff;
 	padding: 0 15px 15px 15px;
 }
+.list-item .info-item {
+	padding-top: 7px;
+}
 .date-post {
 	line-height: 15px;
 }
@@ -331,7 +348,7 @@ header {
 .address {
 	font-size: 15px;
 	margin-bottom: 8px;
-	font-weight: 600;
+	/* font-weight: 600; */
 	text-overflow: ellipsis;
 	overflow: hidden;
 	white-space: nowrap;
@@ -367,6 +384,8 @@ header {
 .attr-detail li {
 	float: left;
 	margin-right: 12px;
+	line-height: 100%;
+	font-size: 15px;
 }
 .attr-detail li span {
 	margin-right: 7px;
@@ -374,9 +393,22 @@ header {
 }
 .price-item {
 	/* display: inline-block; */
-	margin-bottom: 7px;
+	margin-bottom: 10px;
 	font-size: 21px;
 	line-height: 100%;
+}
+.price-item .txt-unit {
+	text-transform: uppercase;
+	font-size: 15px;
+}
+.list-item .price-item {
+	display: inline-block;
+	margin: 0 12px 7px 0;
+	vertical-align: middle;
+}
+.attr-detail li span,
+.list-item .price-item {
+	font-size: 25px;
 }
 .infor-by-up {
 	margin-bottom: 5px;
@@ -386,10 +418,9 @@ header {
 .view-detail {
 	line-height: 32px;
 }
-.list-vertical > li {
-    width: 100%;
-    padding: 0;
-    margin: 0;
+.list-vertical {
+	padding-left: 5px;
+	padding-top: 6px;
 }
 .list-vertical li .item {
     box-shadow: none;
@@ -401,11 +432,36 @@ header {
     display: block;
     float: left;
     width: 100%;
-    padding: 12px 12px;
-    border-bottom: 1px solid #D6D6D6;
+}
+.compare-button {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    z-index: -1;
+    font-size: 13px;
+    background: rgba(0, 0, 0, 0.36);
+    color: #fff;
+    border-radius: 4px;
+    opacity: 0;
+    transition: all .3s ease-out;
+    padding: 1px;
+    cursor: pointer;
+}
+.compare-button:hover {
+    background: rgba(0, 0, 0, 0.63);
+}
+.list-item .item:hover .compare-button {
+    opacity: 1;
+    z-index: 10;
+}
+.compare-button .inner-box {
+    padding: 5px 10px;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 .list-vertical .item a.active {
-	background: rgba(0, 148, 85, 0.15);
+	/* background: rgba(0, 148, 85, 0.15); */
 }
 .list-vertical .item a:link,
 .list-vertical .item a:active {
@@ -414,17 +470,16 @@ header {
 .list-vertical .item a:hover {
 	background: rgba(0, 148, 85, 0.06);
 }
-.list-vertical .item .pic-intro {
-    float: left;
-    width: 160px;
-    height: 125px;
-    margin-bottom: 0;
-}
 .list-vertical .item .info-item {
-    overflow: hidden;
-    padding-bottom: 0;
-    padding-right: 0;
-    position: relative;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: -webkit-linear-gradient(rgba(0,0,0,0),rgba(0,0,0,.5));
+    background: linear-gradient(rgba(0,0,0,0),rgba(0, 0, 0, 0.48));
+    color: #fff;
+    text-shadow: 0px 0px 2px #000;
+    padding: 0 10px 5px 10px;
 }
 .list-vertical .item .type-item {
     position: static;
@@ -433,13 +488,17 @@ header {
     color: inherit;
     margin-bottom: 10px;
 }
-.list-vertical .item .attr-detail {margin-bottom: 7px;}
+.list-item .item .attr-detail {
+	margin: 0 0 6px 0;
+	display: inline-block;
+	vertical-align: middle;
+}
 .list-vertical .address {
 	margin-bottom: 4px;
 	text-overflow: ellipsis;
 	white-space: nowrap;
 	overflow: hidden;
-	padding-right: 20px;
+	font-size: 20px;
 }
 .save-listing {
 	float: right;
@@ -447,8 +506,13 @@ header {
 }
 .list-vertical .save-listing {
 	position: absolute;
-	top: -1px;
-	right: 0;
+	top: 8px;
+	left: 10px;
+	float: none;
+	z-index: 10;
+	color: #fff;
+	font-size: 27px;
+	text-shadow: 0px 0px 2px #000;
 }
 .save-listing.active span:before,
 .save-listing:hover span:before {
@@ -488,6 +552,9 @@ header,footer,#wrapper {
 	}
 	.list-menu li a span {
 		display: none;
+	}
+	.list-menu li a span.num-show {
+		display: inline-block;
 	}
 }
 @media (min-width: 992px) {
@@ -683,7 +750,7 @@ header,footer,#wrapper {
 		display: block;
 		float: left;
 		font-size: 25px;
-		padding: 9px 25px 10px;
+		padding: 10px 25px 10px 15px;
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -769,6 +836,10 @@ header,footer,#wrapper {
 		font-size: 22px;
 		margin-right: 15px;
 	}
+	.list-menu li a span.num-show {
+		font-size: 16px;
+		color: #3c3c3c;
+	}
 	header {
 		height: 45px;
 	}
@@ -776,7 +847,7 @@ header,footer,#wrapper {
 		width: 35px;
 	}
 	.avatar-user-mobile {
-		padding: 5px 25px;
+		padding: 5px 15px;
 	}
 	#wrapper {
 		padding-top: 45px;
@@ -828,14 +899,15 @@ header,footer,#wrapper {
 	vertical-align: middle;
 	height: 100%;
 	width: 0;
+	margin: 0 0 0 -5px;
 }
 .option-user .dropdown-emu .val-selected div p {
 	display: inline-block;
 	vertical-align: middle;
-	width: 94px;
+	/* width: 94px; */
 }
 .user-ui-desktop li.option-user .dropdown-emu {
-	max-width: 160px;
+	/* max-width: 160px; */
 }
 
 .dropdown-up-style {
@@ -1076,6 +1148,7 @@ header,footer,#wrapper {
 }
 .pagination {
 	padding: 0 12px;
+	float: left;
 }
 .pagination>li {
 	float: left;
@@ -1274,16 +1347,20 @@ header,footer,#wrapper {
 .col-right {
 	position: static;
 }
-@media (min-width: 320px) and (max-width: 500px) {
+@media (min-width: 320px) and (max-width: 460px) {
 	.list-item .id-duan {
-		float: none;
-		margin-bottom: 7px;
+		/* float: none; */
+		/* margin-bottom: 7px; */
 	}
 	.list-item .address {
-		margin-bottom: 3px;
+		/* margin-bottom: 3px; */
 	}
 	.list-item .pic-intro {
 		height: 200px;
+	}
+	.price-item {
+		font-size: 17px;
+		font-weight: 600;
 	}
 }
 @media ( max-width: 768px ) {
@@ -1608,6 +1685,44 @@ input[type=checkbox], input[type=radio] {
 .val-selected.active .icon-caret-down:before {
 	content: "\e904";
 }
+.icon-num-get {
+	float: right;
+}
+.inner-listing-items .icon-num-get {
+    position: relative;
+    top: 1px;
+}
+.icon-num-get li {
+	float: left;
+	font-size: 15px;
+	margin-right: 10px;
+	line-height: 100%;
+	font-family: "Open Sans", open-sans, Arial, "Helvetica Neue", sans-serif;
+}
+.inner-listing-items .icon-num-get li {
+	font-size: 13px;
+	color: #e6e6e6;
+}
+.icon-num-get li span {
+	font-size: 17px;
+	position: relative;
+	top: -2px;
+	margin-right: 3px;
+}
+.inner-listing-items .icon-num-get span {
+	font-size: 14px;
+}
+.icon-num-get li:last-child {
+	margin-right: 0;
+}
+.inner-listing-items .date-post span {
+	display: inline-block;
+	margin-left: 10px;
+}
+.inner-listing-items .date-post {
+	color: #e6e6e6;
+	float: left;
+}
 @media (max-width: 550px) {
 	.menu-footer li a {
 		border-left: none;
@@ -1622,4 +1737,22 @@ input[type=checkbox], input[type=radio] {
 	position: absolute;
 	bottom: 0px;
 	right: 0;
+}
+@media ( max-width: 768px ) {
+	.address {
+		overflow: inherit;
+		text-overflow: inherit;
+		white-space: normal;
+	}
+	.logo-bct {
+		position: static;
+		margin-top: 20px;
+		display: block;
+	}
+	.pagination {
+		float: none;
+	}
+	.pagination>li {
+		margin-right: 5px;
+	}
 }

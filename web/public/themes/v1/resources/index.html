@@ -40,19 +40,26 @@
 			<div class="list-menu pull-left">
 				<ul class="clearfix">
 		            <li class="dt-logo"><a href="/" class="wrap-img"><img src="images/logo115x43.png" alt=""><span>metvuong.com</span></a></li>
-		            <li class=""><a href="#"><span class="icon-icons-search"></span>Buy</a></li>
-		            <li class=""><a href="#"><span class="icon-icons-search"></span>Rent</a></li>
-		            <li class=""><a href="#"><span class="icon-key"></span>Sell</a></li>
-		            <li class=""><a href="#"><span class="icon-fill-1"></span>New Project</a></li>
-		            <li class=""><a href="#"><span class="icon-group"></span>News</a></li>
-		            <li class=""><a href="#"><span class="icon-pricing-icon"></span>Pricing</a></li>
+		            <li class=""><a href="#"><span class="icon-icons-search"></span>CẦN MUA</a></li>
+		            <li class=""><a href="#"><span class="icon-icons-search"></span>Cần thuê</a></li>
+		            <li class=""><a href="#"><span class="icon-key"></span>Đăng tin</a></li>
+		            <li class=""><a href="#"><span class="icon-fill-1"></span>Dự án mới</a></li>
+		            <li class=""><a href="#"><span class="icon-group"></span>Tin tức</a></li>
+		            <li class=""><a href="#"><span class="icon-pricing-icon"></span>Dịch vụ</a></li>
+                    <li class="tool-compare "><a href="" data-num=""><span class="icon-balance-scale"></span>So sánh <span class="num-show">(1)</span></a></li>
 		        </ul>
 	        </div>
 
 	        <div class="user-ui-desktop">
 	        	<!-- is login -->
-        		<ul class="clearfix hide">
-		            <li class="chat-header">
+        		<ul class="clearfix">
+		            <li class="num-gold">
+                        <a href="" class="fs-14" data-keys="1">
+							<span class="icon-coin-dollar"></span>
+                            <span class="noti-alert">1</span>
+                        </a>
+                    </li>
+                    <li class="chat-header">
 		            	<div class="dropdown-emu">
 			            	<a class="val-selected clearfix tootip-show" href="#" data-toggle="tooltip" data-placement="bottom" title="Tin nhắn">
 		                        <span class="icon-bubbles-icon"></span>
@@ -132,19 +139,10 @@
 		                    </div>
 	                    </div>
 		            </li>
-		            <li class="dash-header">
-		            	<a class="tootip-show" href="#" data-toggle="tooltip" data-placement="bottom" title="Dashboard">
-		            		<span class="icon-barometer"></span>
-		            	</a>
-		            </li>
 		            <li class="option-user">
 		            	<div class="dropdown-emu">
 			            	<a href="#" class="val-selected clearfix tootip-show" data-toggle="tooltip" data-placement="bottom" title="Profile">
 		                        <span class="wrap-img avatar"><img src="images/MV-Agent Photo.jpg" alt="" width="40" height="40"></span>
-		                        <div>
-		                            <p><span class="name-user">Mét Vuông</span>
-		                            <span class="address">Bà Rịa Vũng Tàu</span></p>
-		                        </div>
 		                    </a>
 		                    <div class="dropdown-up-style hide">
 		                    	<div class="item-dropdown">
@@ -157,6 +155,9 @@
 			                            <li>
 			                            	<a data-method="post" href="#"><div><span class="icon-settings"></span></div>Setting</a>
 			                            </li>
+                                        <li>
+			                            	<a data-method="post" href="#"><div><span class="icon-heart-icon-listing"></span></div>Favorites</a>
+			                            </li>
 			                            <li>
 			                            	<a data-method="post" href="#"><div><span class="icon-sign-out"></span></div>Log Out</a>
 			                            </li>
@@ -165,7 +166,7 @@
 			                                    <a href="#"><img src="images/flag-en.png" alt=""></a>
 			                                    <a href="#"><img src="images/flag-vn.png" alt=""></a>
 			                                </div>
-			                                Language                                
+			                                Ngôn ngữ                                
 			                            </li>
 			                        </ul>
 		                        </div>
@@ -174,14 +175,11 @@
 		            </li>
 		        </ul>
 			    <!-- is logout -->
-			    <ul class="clearfix">
+			    <ul class="clearfix hide">
 					<li class="option-user">
 						<div class="dropdown-emu">
 							<a class="val-selected clearfix" data-toggle="tooltip" data-placement="bottom" href="#" title="" data-original-title="Profile">
 								<span class="wrap-img avatar"><img src="images/default-avatar.jpg" alt="" width="40" height="40"></span>
-								<div>
-									<p>Guest</p>
-								</div>
 							</a>
 							<div class="dropdown-up-style hide">
 								<div class="item-dropdown">
@@ -197,7 +195,7 @@
                                                 <a href="#"><img src="images/flag-en.png" alt=""></a>
                                                 <a href="#"><img src="images/flag-vn.png" alt=""></a>
 											</div>
-											Language                                
+											Ngôn ngữ                                
 										</li>
 									</ul>
 								</div>
@@ -234,6 +232,9 @@
 		                    <li>
 		                    	<a href="#" class=""><span class="icon-mv"><span class="icon-bubbles-icon"></span></span>Chat                                                
 		                    	</a>
+		                    </li>
+                            <li>
+		                    	<a href="#"><span class="icon-mv"><span class="icon-heart-icon-listing"></span></span>Favorites</a>
 		                    </li>
 		                    <li>
 		                    	<a href="#"><span class="icon-mv"><span class="icon-settings"></span></span>Setting</a>
@@ -282,7 +283,7 @@
                     <span class="txt-small">địa chỉ, tên đường, quận huyện, thành phố hoặc ID của tin đăng</span>
                 </div>
                 <form id="search-form" action="">
-                    <input autocomplete="off" id="search" name="v" type="text" placeholder="Quick Search">
+                    <input autocomplete="off" id="search" name="v" type="text" placeholder="Nhập địa chỉ, tên đường, quận, huyện, thành phố hoặc mã tin đăng...">
                     <button type="submit" id="btn-search">Tìm kiếm<!-- <span class="icon-icons-search"></span> --></button>
                     <div class="suggest-search hide">
                         <div class="content-suggest">
@@ -303,7 +304,7 @@
                 <ul class="clearfix list-item row">
                     <li class="col-xs-12 col-sm-6 col-lg-4">
                         <div class="item clearfix">
-                            <a href="#" class="active">
+                            <a href="#">
                                 <div class="pic-intro">
                                     <img src="images/Government_-South_Australia_Police_Headquarters_Built_Environs_main.jpg">
                                 </div>
@@ -322,7 +323,11 @@
                                             <span class="icon-icon-bathroom"></span>3
                                         </li>
                                     </ul>
-                                    <span class="save-listing active"><span class="icon-heart-icon-listing"></span></span>
+                                    <ul class="icon-num-get">
+										<li><span class="icon-heart-icon-listing"></span>3</li>
+										<li><span class="icon-share-social"></span>5</li>
+										<li><span class="icon-icons-search"></span>12</li>
+									</ul>
                                     <p class="price-item">10 million vnd</p>
                                     <p class="date-post">4 ngày trước<span class="pull-right">Điểm: 95</span></p>
                                 </div>
@@ -331,7 +336,7 @@
                     </li>
                     <li class="col-xs-12 col-sm-6 col-lg-4">
                         <div class="item clearfix">
-                            <a href="#" class="active">
+                            <a href="#">
                                 <div class="pic-intro">
                                     <img src="images/Government_-South_Australia_Police_Headquarters_Built_Environs_main.jpg">
                                 </div>
@@ -350,7 +355,11 @@
                                             <span class="icon-icon-bathroom"></span>3
                                         </li>
                                     </ul>
-                                    <span class="save-listing"><span class="icon-heart-icon-listing"></span></span>
+                                    <ul class="icon-num-get">
+										<li><span class="icon-heart-icon-listing"></span>3</li>
+										<li><span class="icon-share-social"></span>5</li>
+										<li><span class="icon-icons-search"></span>12</li>
+									</ul>
                                     <p class="price-item">10 million vnd</p>
                                     <p class="date-post">4 ngày trước<span class="pull-right">Điểm: 95</span></p>
                                 </div>
@@ -359,7 +368,7 @@
                     </li>
                     <li class="col-xs-12 col-sm-6 col-lg-4">
                         <div class="item clearfix">
-                            <a href="#" class="active">
+                            <a href="#">
                                 <div class="pic-intro">
                                     <img src="images/Government_-South_Australia_Police_Headquarters_Built_Environs_main.jpg">
                                 </div>
@@ -378,7 +387,11 @@
                                             <span class="icon-icon-bathroom"></span>3
                                         </li>
                                     </ul>
-                                    <span class="save-listing"><span class="icon-heart-icon-listing"></span></span>
+                                    <ul class="icon-num-get">
+										<li><span class="icon-heart-icon-listing"></span>3</li>
+										<li><span class="icon-share-social"></span>5</li>
+										<li><span class="icon-icons-search"></span>12</li>
+									</ul>
                                     <p class="price-item">10 million vnd</p>
                                     <p class="date-post">4 ngày trước<span class="pull-right">Điểm: 95</span></p>
                                 </div>
@@ -387,7 +400,7 @@
                     </li>
                     <li class="col-xs-12 col-sm-6 col-lg-4">
                         <div class="item clearfix">
-                            <a href="#" class="active">
+                            <a href="#">
                                 <div class="pic-intro">
                                     <img src="images/Government_-South_Australia_Police_Headquarters_Built_Environs_main.jpg">
                                 </div>
@@ -406,7 +419,11 @@
                                             <span class="icon-icon-bathroom"></span>3
                                         </li>
                                     </ul>
-                                    <span class="save-listing active"><span class="icon-heart-icon-listing"></span></span>
+                                    <ul class="icon-num-get">
+										<li><span class="icon-heart-icon-listing"></span>3</li>
+										<li><span class="icon-share-social"></span>5</li>
+										<li><span class="icon-icons-search"></span>12</li>
+									</ul>
                                     <p class="price-item">10 million vnd</p>
                                     <p class="date-post">4 ngày trước<span class="pull-right">Điểm: 95</span></p>
                                 </div>
@@ -415,7 +432,7 @@
                     </li>
                     <li class="col-xs-12 col-sm-6 col-lg-4">
                         <div class="item clearfix">
-                            <a href="#" class="active">
+                            <a href="#">
                                 <div class="pic-intro">
                                     <img src="images/Government_-South_Australia_Police_Headquarters_Built_Environs_main.jpg">
                                 </div>
@@ -434,7 +451,11 @@
                                             <span class="icon-icon-bathroom"></span>3
                                         </li>
                                     </ul>
-                                    <span class="save-listing"><span class="icon-heart-icon-listing"></span></span>
+                                    <ul class="icon-num-get">
+										<li><span class="icon-heart-icon-listing"></span>3</li>
+										<li><span class="icon-share-social"></span>5</li>
+										<li><span class="icon-icons-search"></span>12</li>
+									</ul>
                                     <p class="price-item">10 million vnd</p>
                                     <p class="date-post">4 ngày trước<span class="pull-right">Điểm: 95</span></p>
                                 </div>
@@ -443,7 +464,7 @@
                     </li>
                     <li class="col-xs-12 col-sm-6 col-lg-4">
                         <div class="item clearfix">
-                            <a href="#" class="active">
+                            <a href="#">
                                 <div class="pic-intro">
                                     <img src="images/Government_-South_Australia_Police_Headquarters_Built_Environs_main.jpg">
                                 </div>
@@ -462,7 +483,11 @@
                                             <span class="icon-icon-bathroom"></span>3
                                         </li>
                                     </ul>
-                                    <span class="save-listing"><span class="icon-heart-icon-listing"></span></span>
+                                    <ul class="icon-num-get">
+										<li><span class="icon-heart-icon-listing"></span>3</li>
+										<li><span class="icon-share-social"></span>5</li>
+										<li><span class="icon-icons-search"></span>12</li>
+									</ul>
                                     <p class="price-item">10 million vnd</p>
                                     <p class="date-post">4 ngày trước<span class="pull-right">Điểm: 95</span></p>
                                 </div>
@@ -487,7 +512,7 @@
 						<div class="infor-du-an">
 							<div>
 								<p class="text-uper fs-17 font-600">Novaland</p>
-								<p class="fs-30 mgB-5">SAIGON ROYAL RESIDENCE</p>
+								<p class="fs-30 mgB-5 text-uper">SAIGON ROYAL RESIDENCE</p>
 								<p class="text-center mgB-10"><span class="line-bt"></span></p>
 								<p>Đảo Kim Cương, Bình Trưng Tây, Quận 2, Hồ Chí Minh, Việt Nam</p>
 							</div>
@@ -500,7 +525,7 @@
 						<div class="infor-du-an">
 							<div>
 								<p class="text-uper fs-17 font-600">The Lancaster</p>
-								<p class="fs-30 mgB-5">Lancaster Residences D4, Quận 4</p>
+								<p class="fs-30 mgB-5 text-uper">Lancaster Residences D4, Quận 4</p>
 								<p class="text-center mgB-10"><span class="line-bt"></span></p>
 								<p>Đường Tôn Thất Thuyết, Phường 16, Quận 4, Hồ Chí Minh</p>
 							</div>
@@ -513,7 +538,7 @@
 						<div class="infor-du-an">
 							<div>
 								<p class="text-uper fs-17 font-600">Novaland</p>
-								<p class="fs-30 mgB-5">SAIGON ROYAL RESIDENCE</p>
+								<p class="fs-30 mgB-5 text-uper">SAIGON ROYAL RESIDENCE</p>
 								<p class="text-center mgB-10"><span class="line-bt"></span></p>
 								<p>Đảo Kim Cương, Bình Trưng Tây, Quận 2, Hồ Chí Minh, Việt Nam</p>
 							</div>
@@ -526,7 +551,7 @@
 						<div class="infor-du-an">
 							<div>
 								<p class="text-uper fs-17 font-600">Novaland</p>
-								<p class="fs-30 mgB-5">SAIGON ROYAL RESIDENCE</p>
+								<p class="fs-30 mgB-5 text-uper">SAIGON ROYAL RESIDENCE</p>
 								<p class="text-center mgB-10"><span class="line-bt"></span></p>
 								<p>Đảo Kim Cương, Bình Trưng Tây, Quận 2, Hồ Chí Minh, Việt Nam</p>
 							</div>
@@ -539,7 +564,7 @@
 						<div class="infor-du-an">
 							<div>
 								<p class="text-uper fs-17 font-600">The Lancaster</p>
-								<p class="fs-30 mgB-5">Lancaster Residences D4, Quận 4</p>
+								<p class="fs-30 mgB-5 text-uper">Lancaster Residences D4, Quận 4</p>
 								<p class="text-center mgB-10"><span class="line-bt"></span></p>
 								<p>Đường Tôn Thất Thuyết, Phường 16, Quận 4, Hồ Chí Minh</p>
 							</div>
@@ -552,7 +577,7 @@
 						<div class="infor-du-an">
 							<div>
 								<p class="text-uper fs-17 font-600">Novaland</p>
-								<p class="fs-30 mgB-5">SAIGON ROYAL RESIDENCE</p>
+								<p class="fs-30 mgB-5 text-uper">SAIGON ROYAL RESIDENCE</p>
 								<p class="text-center mgB-10"><span class="line-bt"></span></p>
 								<p>Đảo Kim Cương, Bình Trưng Tây, Quận 2, Hồ Chí Minh, Việt Nam</p>
 							</div>
@@ -1076,7 +1101,7 @@
 	<script src="js/swiper.jquery.min.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function () {
-			var arrImg = ['images/Buy_Hero_130988330_1024x500_2x.jpg', 'images/Buy_Hero_281623895_1024x500_2x.jpg', 'images/Anh-nha-lien-ke.png'],
+			var arrImg = ['images/Buy_Hero_130988330_1024x500_2x.jpg', 'images/Buy_Hero_281623895_1024x500_2x.jpg', 'images/real-estate-industry.png'],
 				imgRand = arrImg[Math.floor(Math.random() * arrImg.length)],
 				imgEmu = $('<img src='+imgRand+' />');
 
