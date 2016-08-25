@@ -530,6 +530,10 @@ li.search-listing input:focus {
     padding: 0 5px 5px 0;
     margin: 0;
 }
+.inner-listing-items .icon-num-get li,
+.inner-listing-items .date-post {
+	color: #d8d8d8;
+}
 @media (min-width: 1200px) {
     .listing-items {
         width: 50%;
