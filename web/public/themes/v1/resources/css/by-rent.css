@@ -173,7 +173,7 @@ li.search-listing input:focus {
 .tabs-listing {
     background: rgba(0, 218, 125, 0.12);
     box-shadow: 0 1px 2px 0 rgba(0,0,0,.4);
-    height: 35px;
+    height: 36px;
 }
 .tabs-listing ul {
     padding-left: 15px;
@@ -418,7 +418,6 @@ li.search-listing input:focus {
 }
 .frm-contact .infor-user-contact a {
     display: inline-block;
-    margin-right: 15px;
     color: #00a769;
 }
 .frm-contact .infor-user-contact a span {
@@ -567,7 +566,7 @@ li.search-listing input:focus {
 @media (max-width: 1366px) {
     .tabs-listing li a {
         font-size: 13px;
-        padding: 8px 5px 9px;
+        padding: 9px 5px 9px;
     }
     .tabs-listing li {
         padding: 0 5px;

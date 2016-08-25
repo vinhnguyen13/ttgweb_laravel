@@ -409,6 +409,20 @@
 .dele-favori:hover {
 	opacity: 1;
 }
+.block-favo .id-duan {
+	float: none;
+	margin-bottom: 10px;
+	line-height: 100%
+}
+.block-favo .date-post {
+	color: #3c3c3c;
+	width: 100%;
+}
+.block-favo .list-item .price-item,
+.block-favo .list-item .item .attr-detail {
+	float: left;
+	width: 100%;
+}
 /*-----End Favorites-------*/
 
 /*-----Payment-------------*/

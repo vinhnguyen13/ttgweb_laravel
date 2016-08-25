@@ -179,3 +179,10 @@
 	font-weight: 600;
 	color: #00a769;
 }
+.your-profile .icon-num-get li,
+.your-profile .date-post {
+	color: #3c3c3c;
+}
+.your-profile .list-item .info-item {
+	padding-bottom: 8px;
+}

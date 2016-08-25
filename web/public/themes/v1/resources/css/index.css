@@ -30,7 +30,7 @@
     width: 0;
 }
 .search-wrap-home {
-    width: 40%;
+    width: 45%;
     margin: 0 auto 0;
     height: 100%;
     position: relative;
@@ -327,7 +327,7 @@
 }
 .du-an-list .swiper-slide {
 	width: 33.3333%;
-	padding: 2px;
+	/* padding: 2px; */
 }
 .du-an-list .swiper-slide .pic-intro {
 	position: relative;
@@ -375,7 +375,7 @@
 		font-size: 25px;
 	}
 	.logo-search-box .txt-small {
-		font-size: 12px;
+		font-size: 11px;
 	}
 	.du-an-list .swiper-slide .pic-intro {
 		height: 200px;
@@ -407,7 +407,7 @@
 		height: 250px;
 	}
 	.logo-search-box {
-		font-size: 20px;
+		font-size: 17px;
 	}
 	#search-form {
 		padding: 0;
