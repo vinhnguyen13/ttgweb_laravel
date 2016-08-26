@@ -1,0 +1,47 @@
+//////POPUP
+<a href="#" data-toggle="modal" data-target="#popup-email"></a>
+											
+<div id="" class="modal fade popup-common" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-body">
+				<div class="wrap-popup">
+					<div class="title-popup">
+						<!--text title-->
+						<a href="#" class="btn-close close" data-dismiss="modal" aria-label="Close">
+							<span class="icon-close-icon"></span>
+						</a>
+					</div>
+					<div class="inner-popup">
+						<!--content-->
+					</div>
+					<div class="bottom-popup">
+						<div class="text-right">
+							<a href="#" class="btn-cancel btn-common btn close" data-dismiss="modal" aria-label="Close">Cancel</a>
+							<a href="#" class="btn-common btn">OK</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+//////RADIO
+<label class="radio-ui">
+	<input type="radio" name="">
+	<span class="icon-checkbox"></span><!--TEXT-->
+</label>
+$('.radio-ui').radio_ui();
+
+//////CHECKBOX
+<label class="checkbox-ui">
+	<input type="checkbox" checked="">
+	<span class="icon-checkbox"></span> <!--TEXT-->
+</label>
+$('.checkbox-ui').checkbox_ui();
+
+
+/////
+
