@@ -15,6 +15,7 @@
 	<link href="css/jquery.mmenu.css" rel="stylesheet" type="text/css" />
 	<!-- InstanceBeginEditable name="EditRegion1" -->
     <link href="css/swiper.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/jquery.fancybox.css" rel="stylesheet" type="text/css" />
 	<link href="css/by-rent.css" rel="stylesheet" type="text/css" />
 	<!-- InstanceEndEditable -->
     <link href="css/common.css" rel="stylesheet" type="text/css" />
@@ -868,22 +869,22 @@
 			        <div class="swiper-wrapper">
 			            <div class="swiper-slide">
 			            	<div class="pic-intro">
-			            		<img src="images/21311_Khai-truong-Pearl-Plaza-2.jpg" alt="" />
+			            		<a href="images/21311_Khai-truong-Pearl-Plaza-2.jpg" class="fancybox" rel="gallery1"><img src="images/21311_Khai-truong-Pearl-Plaza-2.jpg" alt="" /></a>
 			            	</div>
 			            </div>
 			            <div class="swiper-slide">
 			            	<div class="pic-intro">
-			            		<img src="images/22311_Khai-truong-Pearl-Plaza-6.jpg" alt="" />
+			            		<a href="images/22311_Khai-truong-Pearl-Plaza-6.jpg" class="fancybox" rel="gallery1"><img src="images/22311_Khai-truong-Pearl-Plaza-6.jpg" alt="" /></a>
 			            	</div>
 			            </div>
 			            <div class="swiper-slide">
 			            	<div class="pic-intro">
-			            		<img src="images/21311_Khai-truong-Pearl-Plaza-2.jpg" alt="" />
+			            		<a href="images/21311_Khai-truong-Pearl-Plaza-2.jpg" class="fancybox" rel="gallery1"><img src="images/21311_Khai-truong-Pearl-Plaza-2.jpg" alt="" /></a>
 			            	</div>
 			            </div>
 			            <div class="swiper-slide">
 			            	<div class="pic-intro">
-			            		<img src="images/22311_Khai-truong-Pearl-Plaza-8.jpg" alt="" />
+			            		<a href="images/22311_Khai-truong-Pearl-Plaza-8.jpg" class="fancybox" rel="gallery1"><img src="images/22311_Khai-truong-Pearl-Plaza-8.jpg" alt="" /></a>
 			            	</div>
 			            </div>
 			        </div>
@@ -1371,6 +1372,7 @@
 	<!-- InstanceBeginEditable name="EditRegion2" -->
 	<script src="js/swiper.jquery.min.js"></script>
 	<script src="js/listing.js"></script>
+	<script src="js/jquery.fancybox.pack.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function () {
 			var swiper = new Swiper('.slide-detail .swiper-container', {
@@ -1378,6 +1380,12 @@
 		        prevButton: '.swiper-button-prev',
 		        spaceBetween: 0
 		    });
+
+		    $(".fancybox").fancybox({
+				openEffect	: 'none',
+				closeEffect	: 'none',
+				padding: 3
+			});
 		});
 	</script>
 	<!-- InstanceEndEditable -->
