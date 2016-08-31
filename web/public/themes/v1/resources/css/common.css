@@ -11,6 +11,11 @@ a:active {
 	background: rgba(0, 167, 105, 0.05);
 	text-decoration: none;
 }
+.txt-small {
+	font-size: 11px;
+	color: #a7a7a7;
+	font-style: italic;
+}
 .mg-center{margin-left: auto;margin-right: auto;}
 textarea:focus,
 input[type=text]:focus,
@@ -1335,6 +1340,14 @@ header,footer,#wrapper {
 }
 .checkbox-ui {
     padding: 0;
+    max-width: none;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 14px;
+    margin: 0;
+}
+.radio-ui {
+	cursor: pointer;
 }
 .checkbox-ui.active {
     color: #009445;

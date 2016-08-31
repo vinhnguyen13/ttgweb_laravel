@@ -534,6 +534,10 @@ li.search-listing input:focus {
 .inner-listing-items .date-post {
 	color: #d8d8d8;
 }
+#popup-review .modal-dialog {
+    width: 960px;
+    margin-top: 50px;
+}
 @media (min-width: 1200px) {
     .listing-items {
         width: 50%;

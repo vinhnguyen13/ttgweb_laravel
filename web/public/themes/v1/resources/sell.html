@@ -14,6 +14,10 @@
 	<link href="css/reset.min.css" rel="stylesheet" type="text/css" />
 	<link href="css/jquery.mmenu.css" rel="stylesheet" type="text/css" />
     <!-- InstanceBeginEditable name="EditRegion1" -->
+    <link href="css/swiper.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/jquery.fancybox.css" rel="stylesheet" type="text/css" />
+    <link href="css/by-rent.css" rel="stylesheet" type="text/css" />
+    <link href="css/by-rent-expand.css" rel="stylesheet" type="text/css" />
 	<link href="css/sell.css" rel="stylesheet" type="text/css" />
 	<!-- InstanceEndEditable -->
 	<link href="css/common.css" rel="stylesheet" type="text/css" />
@@ -277,7 +281,7 @@
 			<div class="wrap-page">
 				<div class="container">
 					<div class="inner-sell-page row">
-						<div class="col-xs-12 col-md-9 col-sm-8">
+						<div class="col-xs-12 col-md-8">
 							<div class="title-page">Đăng tin rao</div>
 							<div class="alert alert-success alert-dismissible" role="alert">
 								<a href="#" class="font-700 fs-14 color-cd-hover close-alert">
@@ -577,10 +581,10 @@
 								</div>
 							</div>
 							<div class="text-center col-xs-12">
-								<button id="preview" type="button" class="btn-common">Preview <span class="icon-angle-right"></span></button>
+								<button id="preview" type="button" class="btn-common" data-toggle="modal" data-target="#popup-review">Preview</button>
 							</div>
 						</div>
-						<div class="col-xs-12 col-md-3 col-sm-4 checkpoint-listing">
+						<div class="col-xs-12 col-md-4 checkpoint-listing">
 							<div class="inner-checkpoint">
 								<div class="title-point">MetVuong points</div>
 								<div class="point-select">
@@ -776,6 +780,215 @@
         </div>
     </div>
 
+    <div id="popup-review" class="modal fade popup-common" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-body">
+					<div class="wrap-popup">
+						<div class="title-popup">
+							Preview tin đăng
+							<a href="#" class="btn-close close" data-dismiss="modal" aria-label="Close">
+								<span class="icon-close-icon"></span>
+							</a>
+						</div>
+						<div class="inner-popup">
+							<div class="detail-listing detail-listing-default">
+		                        <div class="inner-detail">
+									<div class="slide-detail clearfix">
+										<div class="swiper-container pull-left swiper-container-horizontal">
+									        <div class="swiper-wrapper">
+									            <div class="swiper-slide swiper-slide-active" >
+									            	<div class="pic-intro">
+									            		<a href="images/21311_Khai-truong-Pearl-Plaza-2.jpg" class="fancybox" rel="gallery1"><img src="images/21311_Khai-truong-Pearl-Plaza-2.jpg" alt=""></a>
+									            	</div>
+									            </div>
+									            <div class="swiper-slide swiper-slide-next" >
+									            	<div class="pic-intro">
+									            		<a href="images/22311_Khai-truong-Pearl-Plaza-6.jpg" class="fancybox" rel="gallery1"><img src="images/22311_Khai-truong-Pearl-Plaza-6.jpg" alt=""></a>
+									            	</div>
+									            </div>
+									            <div class="swiper-slide" >
+									            	<div class="pic-intro">
+									            		<a href="images/21311_Khai-truong-Pearl-Plaza-2.jpg" class="fancybox" rel="gallery1"><img src="images/21311_Khai-truong-Pearl-Plaza-2.jpg" alt=""></a>
+									            	</div>
+									            </div>
+									            <div class="swiper-slide" >
+									            	<div class="pic-intro">
+									            		<a href="images/22311_Khai-truong-Pearl-Plaza-8.jpg" class="fancybox" rel="gallery1"><img src="images/22311_Khai-truong-Pearl-Plaza-8.jpg" alt=""></a>
+									            	</div>
+									            </div>
+									        </div>
+									        <!-- Add Arrows -->
+									        <div class="swiper-button-next"><span class="icon-angle-right"></span></div>
+									        <div class="swiper-button-prev swiper-button-disabled"><span class="icon-angle-left"></span></div>
+									    </div>
+										<div class="pull-right event-detail">
+											<ul class="pull-right icons-detail">
+											    <li>
+													<a href="#" class="report">
+											    		<span class="icon-phone-profile"></span>Liên hệ môi giới
+											    	</a>
+											    </li><li>
+											    	<a href="#" class="save-item" data-id="79114" data-url="/vi-VN/listing/favorite">
+											    		<span class="icon-heart-icon-listing"></span>Yêu thích
+											    	</a>
+											    </li><li>
+											    	<a href="#" data-toggle="tooltip" data-placement="bottom" title="Sao chép đường dẫn" data-title-success="Đã sao chép" class="btn-copy" data-clipboard-text="test">
+											    		<span class="icon-link"></span>Sao chép đường dẫn
+											    	</a>
+											    </li>
+											    <li>
+											    	<a href="#" class="share-facebook" data-url="#">
+											    		<span class="icon-facebook"></span>Chia sẻ Facebook
+											    	</a>
+											    </li>
+											    <li>
+											    	<a href="#" data-toggle="modal" data-target="#popup-email" data-type="share" class="email-btn">
+											    		<span class="icon-mail-profile"></span>Chia sẻ Email
+											    	</a>
+											    </li>
+											    
+											    <li>
+											    	<a href="#" data-toggle="modal" data-target="#popup-map">
+											    		<span class="icon-pin-active-copy-3"></span>Vị trí
+											    	</a>
+											    </li>
+											    <li>
+											    	<a href="#" class="report" data-toggle="modal" data-target="#report-listing">
+											    		<span class="icon-warning"></span>Báo cáo
+											    	</a>
+											    </li>
+												<li>
+													<a href="#" class="compare-button flag-compare-set" data-value="79119">
+														<span class="icon-balance-scale"></span>
+														<span class="txt-change">So Sánh</span>
+													</a>
+												</li>
+											    
+											</ul>
+										</div>
+									</div>
+									<div class="infor-detail">
+										<div class="clearfix">
+											<div class="pull-left pdR-25 address-detail">
+												<p class="infor-by-up">Nhà riêng Bán bởi <strong>Chủ nhà</strong></p>
+												<p class="address">12, Đường Phạm Ngũ Lão, Phường Bến Thành, Quận 1, Hồ Chí Minh</p>
+											</div>
+											<div class="pull-left attr-detail-listing">
+												<p class="id-duan">ID:<span>MV25849</span></p>
+												<ul class="clearfix attr-detail">
+													<li>
+														<span class="icon-page-1-copy"></span>119m2
+													</li>
+													<li>
+														<span class="icon-bed-search"></span>3
+													</li>
+													<li>
+														<span class="icon-icon-bathroom"></span>3
+													</li>
+												</ul>
+												<p class="price-item">10 million vnd</p>
+											</div>
+										</div>
+										<div class="txt-detail w-70 pdR-20">
+											<p class="title-attr">Mô tả</p>
+											<p>
+												Vỡ nợ bán gấp mặt tiền Hai Bà Trưng, P.Tân Định, Q1. DT= 4mx20m, giá 16.5 tỷ <br>
+												Nhà đẹp, đang cho thuê. <br>
+												Khu dân cư an ninh , xây apterment lý tưởng hiệu suất cao nhất <br>
+												Vị trí khai thác cho thuê hết công suất thu nhập 4.000$ <br>
+												Xem nhà vui lòng liên hệ: Nguyễn Thị Kim Huệ 0932 6888.17 hoặc 0932 0123 82 (MTG).
+											</p>
+										</div>
+										<div class="txt-detail">
+											<p class="title-attr">Thông tin chi tiết</p>
+											<ul class="clearfix list-ttct">
+												<li><strong>Mặt tiền:</strong> 10m</li>
+												<li><strong>Đường vào:</strong> 2m</li>
+												<li><strong>Số tầng:</strong> 3 Tầng</li>
+												<li><strong>Hướng nhà:</strong> Đông</li>
+												<li><strong>Hướng ban công:</strong> Tây</li>
+											</ul>
+										</div>
+										<div class="txt-detail">
+											<p class="title-attr">Tiện ích</p>
+											<ul class="clearfix list-tienich">
+												<li><span class="icon-parking"></span>Bãi đậu xe</li>
+												<li><span class="icon-icon-gym"></span>Phòng thể dục</li>
+												<li><span class="icon-school"></span> Trường học</li>
+												<li><span class="icon-icon_nature_park_black"></span>Công viên</li>
+												<li><span class="icon-air-conditioner"></span>Máy lạnh</li>
+												<li><span class="icon-may-giat"></span>Máy giặt</li>
+												<li><span class="icon-tu-lanh"></span>Tủ lạnh</li>
+												<li><span class="icon-television"></span>Tivi</li>
+											</ul>
+										</div>
+										<div class="txt-detail frm-contact">
+											<p class="title-attr">Liên hệ</p>
+											<div class="row">
+												<div class="col-xs-12 col-md-6">
+													<div class="form-group">
+														<label for="">Tên <span style="color:red;">*</span></label>
+														<input type="text" class="form-control" id="" placeholder="">
+													</div>	
+													<div class="form-group">
+														<label for="">Email <span style="color:red;">*</span></label>
+														<input type="text" class="form-control" id="" placeholder="">
+													</div>
+													<div class="form-group">
+														<label for="">Điện thoại <span style="color:red;">*</span></label>
+														<input type="text" class="form-control" id="" placeholder="">
+													</div>
+												</div>
+												<div class="col-xs-12 col-md-6">
+													<div class="clearfix mgB-15">
+														<a href="#" class="avatar pull-left">
+															<img src="images/MV-Agent Photo.jpg" alt="">
+														</a>
+														<div class="overflow-all infor-user-contact">
+															<p class="name-user">Met Vuong</p>
+															<div class="stars">
+																<ul class="clearfix">
+																	<li><span class="icon-star-empty"></span></li>
+																	<li><span class="icon-star-empty"></span></li>
+																	<li><span class="icon-star-empty"></span></li>
+																	<li><span class="icon-star-empty"></span></li>
+																	<li><span class="icon-star-empty"></span></li>
+																</ul>
+															</div>
+															<p class="phone"><span class="icon-phone-profile"></span>0123456789</p>
+															<a href="#" class="mgR-5"><span class="icon-user-icon-profile1"></span>Profile</a>
+															<a href="#" class="mgR-5"><span class="icon-bubbles-icon"></span>Chat</a>
+															<a href="#"><span class="icon-mail-profile"></span>Email</a>
+														</div>
+													</div>
+													<div class="form-group">
+														<label for="">Nội dung <span style="color:red;">*</span></label>
+														<textarea class="form-control" rows="3"></textarea>
+														<span class="txt-small-note">1000 remaining</span>
+													</div>
+												</div>
+												<div class="col-xs-12 text-center mgT-30">
+													<button class="btn-common btn-bd-radius text-uper fs-20">Gửi liên hệ</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="bottom-popup">
+							<div class="text-right">
+								<a href="#" class="btn-cancel btn-common btn close" data-dismiss="modal" aria-label="Close">Trở về</a>
+								<a href="#" class="btn-common btn">Đăng tin</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script src="js/string-helper.js"></script>
@@ -810,11 +1023,29 @@
 		});
 	</script>
 	<!-- InstanceBeginEditable name="EditRegion2" -->
+	<script src="js/swiper.jquery.min.js"></script>
+	<script src="js/jquery.fancybox.pack.js"></script>
 	<script>
 		$(document).ready(function () {
 			$('.tienich-frm .checkbox-ui').checkbox_ui();
 			$('.fild-address .checkbox-ui').checkbox_ui();
 			$('.radio-ui').radio_ui();
+
+			$('#popup-review').on('show.bs.modal', function (event) {
+				setTimeout(function () {
+					var swiper = new Swiper('.slide-detail .swiper-container', {
+			            nextButton: '.swiper-button-next',
+			            prevButton: '.swiper-button-prev',
+			            spaceBetween: 0
+			        });
+
+			        $(".fancybox").fancybox({
+						openEffect	: 'none',
+						closeEffect	: 'none',
+						padding: 3
+					});	
+				}, 1000);
+			});
 		});
 	</script>
 	<!-- InstanceEndEditable -->
