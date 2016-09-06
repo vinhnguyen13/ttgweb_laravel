@@ -1,0 +1,268 @@
+.payment-method {
+    width: 70%;
+    margin: 0 auto 0;
+}
+.payment-method .inner-box {
+    font-size: 14px;
+    border: 1px solid #ccc;
+    padding: 30px;
+    border-radius: 4px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.18);
+    background: #fbfbfb;
+    min-height: 600px;
+}
+.payment-method .list-tabs {
+    margin: 30px 0 0;
+}
+.payment-method .list-tabs ul {
+    margin: 0 -20px;
+}
+.payment-method .list-tabs li {
+    width: 33.333%;
+    float: left;
+    padding: 0 20px;
+}
+.payment-method .list-tabs a {
+    display: block;
+    width: 100%;
+    background: #fbfbfb;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.12);
+    transition: all .2s ease-out;
+    text-align: center;
+    position: relative;
+}
+.payment-method .list-tabs a .icon-circle-check {
+    display: none;
+    position: absolute;
+    top: -13px;
+    right: -10px;
+    font-size: 28px;
+    background: #fff;
+    border-radius: 50%;
+    color: #00a769;
+}
+.payment-method .list-tabs a.active .icon-circle-check {
+    display: block;
+}
+.payment-method .list-tabs a p {
+    height: 100px;
+}
+.payment-method .list-tabs a p:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+.payment-method .list-tabs a > div {
+    border: 1px solid #fff;
+    height: 150px;
+    border-radius: 4px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.payment-method .list-tabs a.active,
+.payment-method .list-tabs a:hover {
+    border: 1px solid #00a769;
+    box-shadow: 0px 0px 4px rgba(0, 167, 105, 0.51);
+    background: rgba(0, 167, 105, 0.09);
+}
+.tabs-payment {
+    margin-top: 40px;
+}
+.val-payment {
+    width: 460px;
+    border-right: 1px solid #848484;
+    border-bottom: 1px solid #848484;
+}
+.val-payment li {
+    font-weight: 600;
+    float: left;
+    width: 50%;
+    border-top: 1px solid #848484;
+    border-left: 1px solid #848484;
+    padding: 10px 15px;
+    font-size: 14px;
+}
+.val-payment li span {
+    display: inline-block;
+}
+.val-payment li .num-money {
+    width: 100px;
+}
+.val-payment li .num-keys {
+    margin-left: 20px;
+    color: #00a769;
+}
+.noti-pay {
+    margin-bottom: 30px;
+}
+.tab-payment .val-selected {
+    display: block;
+    border: solid 1px #D6D6D6;
+    background: none;
+    font-size: 13px;
+    height: 32px;
+    padding: 5px 8px;
+    width: 100%;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    background: #fff;
+}
+.tab-payment .val-selected:hover {
+    border: 1px solid #00a769;
+}
+.tab-payment .val-selected.active {
+    background: #f3f3f3;
+    border: 1px solid #00a769;
+}
+.tab-payment .val-selected .icon-caret-down {
+    float: right;
+    line-height: 22px;
+}
+.tab-payment .dropdown-up-style {
+    top: 37px;
+}
+.tab-payment .item-dropdown li a {
+    padding: 7px 10px;
+    font-size: 14px;
+    text-transform: capitalize;
+}
+.tab-payment .item-dropdown li a:hover {
+    background: rgba(0, 167, 105, 0.25);
+}
+.tab-payment label {
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+i.VISA, i.MASTE, i.AMREX, i.JCB, i.VCB, i.TCB, i.MB, i.VIB, i.ICB, i.EXB, i.ACB, i.HDB, i.MSB, i.NVB, i.DAB, i.SHB, i.OJB, i.SEA, i.TPB, i.PGB, i.BIDV, i.AGB, i.SCB, i.VPB, i.VAB, i.GPB, i.SGB,i.NAB,i.BAB
+{ width:80px; height:30px; display:block; background:url(../images/bank_logo.png) no-repeat;}
+i.MASTE { background-position:0px -31px}
+i.AMREX { background-position:0px -62px}
+i.JCB { background-position:0px -93px;}
+i.VCB { background-position:0px -124px;}
+i.TCB { background-position:0px -155px;}
+i.MB { background-position:0px -186px;}
+i.VIB { background-position:0px -217px;}
+i.ICB { background-position:0px -248px;}
+i.EXB { background-position:0px -279px;}
+i.ACB { background-position:0px -310px;}
+i.HDB { background-position:0px -341px;}
+i.MSB { background-position:0px -372px;}
+i.NVB { background-position:0px -403px;}
+i.DAB { background-position:0px -434px;}
+i.SHB { background-position:0px -465px;}
+i.OJB { background-position:0px -496px;}
+i.SEA { background-position:0px -527px;}
+i.TPB { background-position:0px -558px;}
+i.PGB { background-position:0px -589px;}
+i.BIDV { background-position:0px -620px;}
+i.AGB { background-position:0px -651px;}
+i.SCB { background-position:0px -682px;}
+i.VPB { background-position:0px -713px;}
+i.VAB { background-position:0px -744px;}
+i.GPB { background-position:0px -775px;}
+i.SGB { background-position:0px -806px;}
+i.NAB { background-position:0px -837px;}
+i.BAB { background-position:0px -868px;}
+.tab-payment .item-dropdown {
+    max-height: 250px;
+    overflow: hidden;
+    overflow-y: auto;
+}
+.tab-payment {
+    display: none;
+}
+.mobi-card li {
+    float: left;
+    margin-right: 20px;
+}
+.mobi-card li input {
+    display: block;
+    margin: 10px auto 0;
+}
+@media (max-width: 860px) {
+    .payment-method {
+        width: 100%;
+    }
+}
+@media (max-width: 550px) {
+    .payment-method .list-tabs a.active,
+    .payment-method .list-tabs a {
+        padding: 7px 0;
+        border: none;
+        box-shadow: none;
+        font-size: 12px;
+        background: #00a769;
+        border-radius: 0;
+        border-left: 1px solid #fff;
+        color: #fff;
+    }
+    .payment-method .list-tabs a.active {
+        background: #00633e;
+    }
+    .payment-method .list-tabs li:first-child a.active,
+    .payment-method .list-tabs li:first-child a {
+        border-left: none;
+    }
+    .payment-method .list-tabs a > div {
+        border: none;
+        height: 35px;
+    }
+    .payment-method .list-tabs a.active .icon-circle-check,
+    .payment-method .list-tabs a p {
+        display: none;
+    }
+    .payment-method .inner-box {
+        padding: 0;
+        background: none;
+        border: none;
+        box-shadow: none;
+    }
+    .payment-method .list-tabs li {
+        padding: 0;
+    }
+    .payment-method .list-tabs ul {
+        margin: 0;
+    }
+    .payment-method .inner-box p.fs-17 {
+        font-size: 13px;
+    }
+    .val-payment li {
+        padding: 0;
+        width: 100%;
+        border: none;
+        margin-bottom: 10px;
+    }
+    .val-payment {
+        border: none;
+        width: 100%;
+    }
+    .payment-method .list-tabs a > div:before {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+    }
+    .payment-method .list-tabs a > div span {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .mobi-card li:last-child {
+        margin-right: 0;
+    }
+    .mobi-card {
+        margin: 0 -10px;
+    }
+    .mobi-card li {
+        width: 33.333%;
+        margin-right: 0;
+        padding: 0 10px;
+    }
+}

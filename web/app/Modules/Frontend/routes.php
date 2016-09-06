@@ -35,5 +35,4 @@ Route::group(['middleware' => ['web'], 'module' => 'Frontend', 'namespace' => 'A
         });
 });
 
-
 Route::get('/generate/models', ['uses' => '\\Jimbolino\\Laravel\\ModelBuilder\\ModelGenerator5@start', 'namespace' => 'Jimbolino\Laravel\ModelBuilder']);

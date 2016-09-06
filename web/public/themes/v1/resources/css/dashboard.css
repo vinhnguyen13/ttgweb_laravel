@@ -1,0 +1,861 @@
+.menuUser {
+    width: 240px;
+    position: fixed;
+    background: #fff;
+    border: 1px solid #d6d6d6;
+    box-shadow: 0px 0px 3px rgba(51, 51, 51, 0.12);
+    border-radius: 3px;
+    margin-bottom: 30px;
+}
+.menuUser li a {
+    display: block;
+    /* border-bottom: 1px solid #DADADA; */
+    padding: 15px 30px 15px 20px;
+    text-transform: uppercase;
+    position: relative;
+    color: #3c3c3c;
+    font-size: 15px;
+    /* height: 60px; */
+    /* line-height: 60px; */
+}
+.menuUser li:first-child .hemi-intro-popover {
+    top: 10px !important;
+}
+.menuUser li:first-child .popover.right>.arrow {
+    top: 60px !important;
+}
+.menuUser li a.btn-tour {
+    padding: 0;
+    display: inline-block;
+    font-size: 14px;
+    padding: 6px 12px;
+    text-transform: none;
+    font-weight: bold;
+}
+.menuUser li a.btn-tour:hover {
+    color: #3c3c3c;
+}
+.menuUser li a > div {
+    display: inline-block;
+    vertical-align: middle;
+    width: 45px;
+    line-height: 100%;
+}
+.menuUser li a > div span {
+    font-size: 27px;
+    line-height: 100%;
+}
+.menuUser li a.active > div .icon-heart-icon-listing:before {
+    content: "\e91f";
+}
+.menuUser li a > div span.icon-mv .icon-barometer {
+    font-size: 32px;
+}
+.menuUser li a > div .icon-settings {
+    color: #3c3c3c;
+}
+.menuUser li a:hover > div .icon-settings,
+.menuUser li a.active > div .icon-settings,
+.menuUser li a.active,
+.menuUser li a:hover {
+    /* background: #F7F7F7; */
+    color: #00a769;
+}
+.menuUser li a.active {
+    font-weight: 700;
+}
+.menuUser li a .notifi {
+    left: 40px;
+}
+#page-dashboard {
+    background: #f5f5f5;
+    min-height: 100%;
+    padding-top: 105px;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+#page-dashboard > .container {
+	height: 100%;
+}
+.block-dash {
+    padding-left: 260px;
+    transition: all .2s ease-out;
+    -webkit-transition: all .2s ease-out;
+    -ms-transition: all .2s ease-out;
+    padding-bottom: 50px;
+    /* position: absolute; */
+    /* top: 0; */
+    /* left: 0; */
+}
+.block-dash .title-top {
+    color: #3c3c3c;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding-bottom: 25px;
+}
+.item-posted {
+    margin-bottom: 20px;
+}
+.item-posted .inner-box {
+    font-size: 14px;
+    background: #fff;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 1px 1px 2px #d2d2d2;
+    -webkit-box-shadow: 0px 0px 4px #d2d2d2;
+    -moz-box-shadow: 1px 1px 2px #d2d2d2;
+    -ms-box-shadow: 1px 1px 2px #d2d2d2;
+    width: 100%;
+    height: 220px;
+}
+.item-posted .info-item {
+    padding-bottom: 0;
+}
+.item-posted .type-item {
+    position: static;
+    background: none;
+    padding: 0;
+    color: #3c3c3c;
+    text-transform: capitalize;
+    font-weight: 400;
+    font-size: 13px;
+    margin-bottom: 2px;
+}
+.item-posted .info-item .address {
+    margin-bottom: 5px;
+}
+.item-posted .attr-detail li span {
+    font-size: 25px;
+}
+.item-posted .price-item {
+    margin-bottom: 10px;
+    font-size: 25px;
+    float: left;
+    margin-right: 15px;
+}
+.item-posted .attr-detail {
+    float: left;
+    margin: 0 0 10px 0;
+}
+.item-posted .pic-intro {
+    width: 25%;
+    margin: 0;
+    display: table-cell;
+    vertical-align: top;
+    height: 220px;
+    position: relative;
+}
+.item-posted .attr-listing-post {
+    padding: 10px 15px;
+    width: 75%;
+    display: table-cell;
+    vertical-align: middle;
+    height: 220px;
+}
+.item-posted .attr-listing-post > div {
+}
+.attr-listing-post .address {
+    font-size: 19px;
+    color: #00a769;
+    line-height: 24px;
+    margin-bottom: 6px;
+}
+.attr-listing-post .id-duan {
+    float: none;
+    margin-bottom: 10px;
+    line-height: 100%;
+}
+.num-startus-item span {
+    font-size: 20px;
+    width: 24px;
+    display: inline-block;
+    margin-right: 5px;
+}
+.num-startus-item .icon-icons-search {
+    font-size: 22px;
+}
+.num-startus-item {
+    font-size: 13px;
+    float: left;
+    width: 50%;
+    height: 25px;
+    margin-bottom: 8px;
+}
+.num-startus-item .icon-eye-copy {
+    font-size: 17px;
+}
+.num-startus-item strong {
+    display: inline-block;
+    margin-right: 5px;
+    font-size: 15px;
+    line-height: 100%;
+}
+.st-high {
+    color: #5ac134;
+}
+.action-posted a {
+    display: block;
+    text-transform: capitalize;
+    margin-bottom: 7px;
+    font-size: 13px;
+    /* width: 150px; */
+    position: relative;
+    padding-right: 20px;
+}
+.action-posted a span {
+    position: absolute;
+    top: 6px;
+    right: 5px;
+}
+.time-boot {
+    margin-bottom: 15px;
+}
+.num-pic {
+	position: absolute;
+	top: 0;
+	right: 0;
+	background: rgba(0, 0, 0, 0.51);
+	padding: 5px;
+	color: #fff;
+}
+.line-noti {
+    position: absolute;
+    height: 100%;
+    border-left: 1px solid #a2a2a2;
+}
+.block-noti {
+    position: relative;
+    padding-left: 30px;
+    padding-bottom: 50px;
+}
+.item-noti {
+    position: relative;
+    margin-left: 40px;
+    margin-top: 25px;
+}
+.item-noti.un-read {
+    border: 1px dotted #b9b9b9;
+    padding: 10px;
+    margin-left: 30px;
+    border-radius: 4px;
+}
+.item-noti .icon-noti {
+    position: absolute;
+    top: 7px;
+    left: -53px;
+    display: inline-block;
+    font-size: 25px;
+    background: whitesmoke;
+    padding: 10px 0;
+}
+.item-noti.un-read .icon-noti {
+    left: -43px
+}
+.item-noti .icon-eye-copy {
+    left: -57px
+}
+.item-noti.un-read .icon-eye-copy {
+    left: -47px
+}
+.item-noti .avatar-noti {
+    display: block;
+    float: left;
+    width: 60px;
+    height: 60px;
+    margin: 0;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 15px;
+}
+.item-noti .info-item {
+    overflow: hidden;
+    padding: 6px 0 0 0;
+    font-size: 15px;
+}
+.item-noti .info-item a {
+    font-weight: 600;
+}
+.item-noti .info-item a:hover {
+    color: #00a769;
+}
+.item-noti .info-item .time-noti {
+    font-size: 13px;
+    margin-top: 5px;
+}
+.item-noti .info-item .val-noti {
+    text-decoration: underline;
+}
+
+/*-------Chat--------*/
+.block-chat {
+    position: relative;
+}
+.chat-his {
+    background: #fff;
+    border: 1px solid #00a769;
+    width: 100%;
+}
+.chat-his .inner-box {
+    /* min-height: 700px; */
+    border-left: 1px solid #00a769;
+    position: relative;
+    padding-bottom: 50px;
+}
+.chat-his .items-chat .inner-box {
+    border-left: none;
+}
+.title-chat {
+    border-bottom: 1px solid #00a769;
+    border-left: 1px solid #00a769;
+    height: 50px;
+    box-shadow: 0px 1px 1px 0px rgba(204, 204, 204, 0.48);
+    -webkit-box-shadow: 0px 1px 1px 0px rgba(204, 204, 204, 0.48);
+    -ms-box-shadow: 0px 1px 1px 0px rgba(204, 204, 204, 0.48);
+}
+.items-chat .title-chat {
+    border-left: none;
+    padding: 9px 10px;
+    background: #efefef;
+}
+.search-history {
+    position: relative;
+}
+.search-history .btn-search-hist {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: none;
+    border: none;
+    font-size: 20px;
+    padding: 6px 10px;
+}
+.search-history input[type=text] {
+    padding-right: 30px;
+    background: #fff;
+}
+.detail-chat .title-chat .name-user {
+	text-shadow: 1px 1px 1px #fff;
+	-webkit-text-shadow: 1px 1px 1px #fff;
+	-ms-text-shadow: 1px 1px 1px #fff;
+}
+.item-user-chat {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #00a769;
+}
+.item-user-chat:last-child {
+    border-bottom: none;
+}
+.item-user-chat:hover {
+    background: #f7f7f7;
+}
+.item-user-chat.un-read {
+    background: #e3e3e3;
+    /* color: #fff; */
+}
+.item-user-chat.un-read .info-item {
+    /* text-shadow: none; */
+}
+.item-user-chat.un-read .date-chat {
+    /* color: #ccc; */
+}
+.item-user-chat.un-read .info-item .name-user {
+    color: #00a769;
+}
+.item-user-chat .avatar-user {
+    width: 60px;
+    height: 60px;
+    display: block;
+    overflow: hidden;
+    border-radius: 50%;
+    float: left;
+    margin-right: 15px;
+}
+.item-user-chat .info-item {
+    overflow: hidden;
+    padding: 10px 0 0 0;
+}
+.item-user-chat .info-item .name-user {
+    font-weight: 600;
+    font-size: 15px;
+}
+.item-user-chat .info-item .txt-short {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 2px;
+}
+/*-------End Chat--------*/
+
+
+/*-----Favorites-------*/
+.block-favo .list-item .item {
+	position: relative;
+}
+.dele-favori {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 5px 6px;
+	background: rgba(0, 0, 0, 0.28);
+	color: #fff;
+	cursor: pointer;
+	opacity: .6;
+}
+.dele-favori:hover {
+	opacity: 1;
+}
+.block-favo .id-duan {
+	float: none;
+	margin-bottom: 10px;
+	line-height: 100%
+}
+.block-favo .date-post {
+	color: #3c3c3c;
+	width: 100%;
+}
+.block-favo .list-item .price-item,
+.block-favo .list-item .item .attr-detail {
+	float: left;
+	width: 100%;
+}
+/*-----End Favorites-------*/
+
+/*-----Payment-------------*/
+.keys-recent {
+	background: rgba(0, 167, 105, 0.16);
+	padding: 10px 15px;
+	border-radius: 4px;
+	margin-bottom: 25px;
+	border: 1px solid #d6d6d6;
+}
+.tbl-wrap {
+	display: table;
+	font-size: 13px;
+	width: 100%;
+	vertical-align: top;
+}
+.tbl-wrap > div {
+	display: table-row;
+	width: 100%;
+}
+.tbl-wrap > div > div {
+	display: table-cell;
+	padding: 10px 5px;
+	/* These are technically the same, but use both */
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	-ms-word-break: break-all;
+	/* This is the dangerous one in WebKit, as it breaks things wherever */
+	word-break: break-all;
+	/* Instead use this non-standard one: */
+	word-break: break-word;
+	/* Adds a hyphen where the word breaks, if supported (No Blink) */
+	-ms-hyphens: auto;
+	-moz-hyphens: auto;
+	-webkit-hyphens: auto;
+	hyphens: auto;
+}
+.tbl-wrap .thead > div {
+	font-weight: 600;
+	border-bottom: 2px solid #00a769;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.search-pay {
+	margin-bottom: 10px;
+	margin-top: 40px;
+}
+.search-pay input[type=text] {
+	width: 250px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+
+/*-----End Payment-------------*/
+
+
+
+/*-----My Profile-------------*/
+.block-profile {
+	font-size: 14px;
+	margin-top: 30px;
+}
+.block-profile .avatar-user {
+	width: 120px;
+	margin: 0 auto 0;
+}
+.block-profile .avatar-profile {
+	float: right;
+	width: 30%;
+}
+.block-profile .avatar-user span {
+	display: block;
+	margin-bottom: 10px;
+	overflow: hidden;
+	border-radius: 5px;
+}
+.block-profile .info-item {
+	overflow: hidden;
+	padding: 0;
+	font-size: 14px;
+}
+.block-profile .name-user {
+	font-size: 20px;
+	margin-bottom: 5px;
+}
+.block-profile .info-item p {
+	margin-bottom: 5px;
+}
+.block-profile .dia-chi span {
+	position: relative;
+	top: -1px;
+}
+.block-profile p span {
+	width: 30px;
+	display: inline-block;
+}
+.block-profile p span.icon-edit {
+	width: auto;
+	font-size: 17px;
+	margin-left: 10px;
+	cursor: pointer;
+}
+.block-profile p span.icon-edit:hover {
+	color: #00a769;
+}
+.block-profile .group-frm {
+	position: relative;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.08);
+	margin-bottom: 50px;
+}
+.block-profile .group-frm .inner-group {
+	border: 1px solid #fff;
+	padding: 30px 30px 15px;
+	border-radius: 4px;
+}
+.block-profile .group-frm .title-frm {
+	position: absolute;
+	top: -12px;
+	left: 20px;
+	background: #f5f5f5;
+	font-weight: 600;
+	font-size: 15px;
+	text-transform: uppercase;
+	padding: 0 15px;
+}
+.block-profile .group-frm label {
+	font-weight: 600;
+	font-size: 13px;
+}
+.block-profile .detail-profile  {
+	float: left;
+	width: 70%;
+}
+.block-profile .group-frm textarea {
+	height: 150px;
+}
+/*-----End My Profile-------------*/
+
+
+/*-----------thong ke---------------*/
+.btn-show-chart {
+	font-size: 13px;
+	background: #ccc;
+	padding: 5px 20px;
+	float: left;
+	color: #333;
+	white-space: nowrap;
+	vertical-align: middle;
+	background-color: #eee;
+	background-image: -webkit-linear-gradient(#fcfcfc, #eee);
+	background-image: linear-gradient(#fcfcfc, #eee);
+	border: 1px solid #d5d5d5;
+	margin-left: -1px;
+}
+.btn-show-chart:first-child {
+	border-radius: 4px 0 0 4px;
+}
+.btn-show-chart:last-child {
+	border-radius: 0 4px 4px 0;
+}
+.btn-show-chart:hover {
+    text-decoration: none;
+    background-color: #ddd;
+    background-image: -webkit-linear-gradient(#eee, #ddd);
+    background-image: linear-gradient(#eee, #ddd);
+    border-color: #ccc;
+}
+.btn-show-chart:active {
+	box-shadow: inset 0 2px 4px rgba(0,0,0,0.15);
+}
+/*-----------End thong ke---------------*/
+
+#popup-boot .inner-popup {
+	font-size: 14px;
+}
+#popup-boot .inner-popup label {
+	font-weight: 600;
+	font-size: 13px;
+	margin: 0;
+	position: relative;
+	padding-left: 25px;
+	color: #007147;
+}
+#popup-boot .inner-popup .icon-checkbox {
+	font-size: 17px;
+	position: absolute;
+	top: 2px;
+	left: 0;
+}
+#popup-boot-alert .modal-dialog,
+#popup-boot .modal-dialog {
+	width: 400px;
+}
+#popup-boot .keys-get {
+	border: 1px dotted #ccc;
+	border-radius: 4px;
+	padding: 10px 0;
+	margin-bottom: 15px;
+}
+.option-compare {
+	position: fixed;
+	width: 240px;
+}
+.list-menu-compare div {
+	text-transform: uppercase;
+	font-size: 16px;
+}
+.list-menu-compare ul {
+	overflow: hidden;
+	overflow-y: auto;
+	background: #fff;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border: 1px solid #d6d6d6;
+    box-shadow: 0px 0px 3px rgba(51, 51, 51, 0.12);
+    border-radius: 3px;
+}
+.list-menu-compare .listing-compare {
+	max-height: 310px;
+}
+.list-menu-compare .listing-option {
+	max-height: 230px;
+}
+.list-menu-compare ul a {
+	font-size: 14px;
+	display: block;
+}
+.list-menu-compare .checkbox-ui {
+	padding: 5px 10px;
+	display: block;
+	position: relative;
+	padding-left: 30px;
+}
+.list-menu-compare .checkbox-ui.active {
+	color: #3c3c3c;
+}
+.list-menu-compare .checkbox-ui .icon-checkbox {
+	position: absolute;
+	top: 7px;
+	left: 7px;
+	text-decoration: none;
+	margin: 0;
+	color: #3c3c3c;
+}
+.list-menu-compare ul a:hover,
+.list-menu-compare a:hover .checkbox-ui .icon-checkbox,
+.list-menu-compare a:hover .checkbox-ui.active {
+	color: #00a769;
+}
+.list-menu-compare ul a span {
+	display: inline;
+	font-size: 11px;
+	margin-left: 7px;
+	color: red;
+	text-decoration: underline;
+	cursor: pointer;
+}
+.list-menu-compare ul a span:hover {
+	text-decoration: none;
+}
+.tbl-wrap .swiper-wrapper {
+    display: table;
+    padding: 0;
+}
+.tbl-wrap .wrap-tr-each {
+    display: table-row;
+}
+.tbl-wrap .wrap-tr-each > div {
+    display: table-cell;
+    border-bottom: 1px solid #ccc;
+    /* These are technically the same, but use both */
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    -ms-word-break: break-all;
+    /* This is the dangerous one in WebKit, as it breaks things wherever */
+    word-break: break-all;
+    /* Instead use this non-standard one: */
+    word-break: break-word;
+
+    /* Adds a hyphen where the word breaks, if supported (No Blink) */
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+}
+.list-compare .tbl-wrap .wrap-tr-each > div {
+    /* These are technically the same, but use both */
+    overflow-wrap: inherit;
+    word-wrap: inherit;
+    -ms-word-break: inherit;
+    /* This is the dangerous one in WebKit, as it breaks things wherever */
+    word-break: inherit;
+    /* Instead use this non-standard one: */
+    word-break: inherit;
+}
+.wrap-tr-each > div > span {
+    padding: 15px 10px;
+    display: block;
+}
+.img-compare .pic-intro {
+    width: 80px;
+    height: 60px;
+    margin: 0 10px 0 0;
+    border-radius: 3px;
+    overflow: hidden;
+}
+.list-compare .tbl-wrap .bg-2 {
+    background: #eaeaea;
+}
+.price-big {
+    font-weight: 600;
+    font-size: 15px;
+}
+.img-compare:hover {
+    color: #00a769;
+}
+@media (max-width: 1024px) {
+    .menuUser {
+        display: none;
+    }
+    .block-dash {
+        padding-left: 0;
+    }
+}
+@media (max-width: 860px) {
+    #page-dashboard {
+        padding-top: 80px;
+    }
+}
+@media (max-width: 768px) {
+	.keys-recent {
+		width: 100%;
+	}
+	.tbl-wrap > div > div {
+		width: auto;
+	}
+	.tbl-wrap > div > div.col-gc,
+	.tbl-wrap > div > div.col-mtd {
+		display: none;
+	}
+    .item-posted {
+        float: left;
+        width: 50%;
+        padding: 0 10px;
+        margin-bottom: 35px;
+    }
+    .item-posted .inner-box {
+        height: auto;
+    }
+    .item-posted .pic-intro {
+        width: 100%;
+        display: block;
+    }
+    .item-posted .attr-listing-post {
+        display: block;
+        width: 100%;
+    }
+    .item-posted .attr-listing-post > div {
+        width: 100%;
+    }
+    .block-bdk {
+        margin: 0 -10px;
+    }
+    .items-chat {
+    	width: 100%;
+    }
+    .chat-his .detail-chat {
+    	display: none;
+    }
+}
+@media (max-width: 640px) {
+	.your-profile .list-item > li {
+		width: 100%;
+	}
+	.your-profile .title-box p {
+		line-height: inherit;
+		margin-bottom: 10px;
+	}
+	.your-profile .nav-tabs>li>a {
+		padding: 5px 15px;
+	}
+	.your-profile .nav-tabs {
+		width: 100%;
+	}
+}
+@media (max-width: 550px) {
+	.block-profile .avatar-user {
+		float: none;
+		margin: 0 0 15px 0;
+	}
+	.change-pass {
+		width: 100%;
+	}
+    .item-posted {
+        float: none;
+        width: 100%;
+    }
+    .attr-listing-post .address {
+        text-overflow: inherit;
+        overflow: inherit;
+        white-space: inherit;
+    }
+    .block-profile .avatar-profile {
+    	width: 100%;
+    	margin-bottom: 20px;
+    }
+    .block-profile .detail-profile {
+    	width: 100%;
+    }
+    .block-profile {
+    	margin-top: 0;
+    }
+}
+@media (max-width: 460px) {
+	.item-review .avatar-user {
+		float: none;
+		margin-bottom: 15px;
+	}
+	.item-review .info-item {
+		overflow: inherit;
+		padding: 0;
+	}
+	.item-review .info-item .name-user a {
+		display: block;
+	}
+	.item-review .info-item .name-user span {
+		display: block;
+		border: none;
+		padding: 0;
+		margin-top: 10px;
+	}
+}
