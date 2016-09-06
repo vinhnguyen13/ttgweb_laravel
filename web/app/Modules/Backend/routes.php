@@ -15,8 +15,8 @@ use Illuminate\Support\Facades\Lang;
 use Illuminate\Support\Facades\App;
 
 Route::group(['middleware' => ['web'], 'module' => 'Frontend', 'namespace' => 'App\Modules\Frontend\Controllers'], function () {
-        Route::get('/admin', function () {
-            return view('welcome', ['content'=> PHP_EOL.\Illuminate\Foundation\Inspiring::quote().PHP_EOL]);
+        Route::get('/admin/demo', function () {
+            return view('demo', ['content'=> PHP_EOL.\Illuminate\Foundation\Inspiring::quote().PHP_EOL]);
         });
 
 });
