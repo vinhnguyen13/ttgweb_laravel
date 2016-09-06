@@ -159,6 +159,10 @@ return [
          * IDE helper
          */
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
+        /*
+         * Load modules
+         */
+        App\Modules\ModuleServiceProvider::class,
 
     ],
 
