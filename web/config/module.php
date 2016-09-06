@@ -1,7 +1,7 @@
 <?php
     return [
         'modules' => [
-//            'admin' => 'Backend',
+            'admin' => 'Backend',
             'site' => 'Frontend',
             'api' => 'Rest'
         ]
