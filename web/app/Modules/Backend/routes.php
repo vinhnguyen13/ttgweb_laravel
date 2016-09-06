@@ -14,12 +14,9 @@ use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\Lang;
 use Illuminate\Support\Facades\App;
 
-Route::group(['middleware' => ['web'], 'module' => 'Frontend', 'namespace' => 'App\Modules\Frontend\Controllers'], function () {
-        Route::get('/admin', function () {
-            return view('welcome', ['content'=> PHP_EOL.\Illuminate\Foundation\Inspiring::quote().PHP_EOL]);
+Route::group(['prefix' => 'admin', 'middleware' => ['web'], 'module' => 'Backend', 'namespace' => 'App\Modules\Backend\Controllers'], function () {
+        Route::get('/demo', function () {
+            return view('demo', ['content'=> PHP_EOL.\Illuminate\Foundation\Inspiring::quote().PHP_EOL]);
         });
-
+        Route::get('/home-demo', ['uses' => 'Home@demo', 'as'=>'home_demo']);
 });
-
-
-Route::get('/generate/models', ['uses' => '\\Jimbolino\\Laravel\\ModelBuilder\\ModelGenerator5@start', 'namespace' => 'Jimbolino\Laravel\ModelBuilder']);

@@ -20,4 +20,9 @@ class Home extends Controller
         return view('welcome', ['content'=> PHP_EOL.\Illuminate\Foundation\Inspiring::quote().PHP_EOL]);
     }
 
+    public function demo()
+    {
+        return view('demo', ['content'=> PHP_EOL.\Illuminate\Foundation\Inspiring::quote().PHP_EOL]);
+    }
+
 }

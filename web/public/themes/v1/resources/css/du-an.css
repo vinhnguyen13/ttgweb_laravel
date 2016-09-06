@@ -1,0 +1,283 @@
+#search-duan-form {
+    position: relative;
+}
+#search-duan-form input {
+    width: 100%;
+    padding-right: 30px;
+}
+#btn-search-duan {
+    border: none;
+    background: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px 6px 6px;
+}
+.search-duan {
+    width: 50%;
+}
+.du-an-hot {
+    position: relative;
+    margin-bottom: 40px;
+}
+.du-an-hot .pic-intro {
+    height: 430px;
+    margin-bottom: 0;
+}
+.du-an-hot .info-item {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-image: -webkit-linear-gradient(top, transparent 0%, rgba(0,0,0,0.87) 100%);
+    background-image: -o-linear-gradient(top, transparent 0%, rgba(0,0,0,0.87) 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0,0,0,0.87)));
+    background-image: -moz-linear-gradient(top, transparent 0%, rgba(0,0,0,0.87) 100%);
+    background-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.87) 100%);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#B3000000', GradientType=0);
+    text-shadow: 0px 0px 0px;
+    width: 100%;
+    padding-top: 80px;
+    color: #fff;
+    font-size: 13px;
+}
+.du-an-hot .info-item a {
+    font-size: 25px;
+    text-transform: uppercase;
+    color: #00FFA0;
+    font-weight: 600;
+    line-height: 100%;
+    margin-bottom: 5px;
+    display: block;
+}
+.du-an-hot .info-item .address-duan {
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+.du-an-hot .info-item .date-post {
+    font-size: 13px;
+    margin-bottom: 5px;
+    color: #989898;
+}
+.list-duan li {
+    float: left;
+    width: 100%;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #D4D4D4;
+}
+.list-duan li:last-child {
+    margin-bottom: 0;
+}
+.list-duan li .pic-intro {
+    float: left;
+    width: 30%;
+    height: 180px;
+    margin-bottom: 0;
+    padding: 3px;
+    border: 1px solid #00a769;
+    box-shadow: 0px 0px 5px rgba(51, 51, 51, 0.5);
+    -webkit-box-shadow: 0px 0px 5px rgba(51, 51, 51, 0.5);
+    -ms-box-shadow: 0px 0px 5px rgba(51, 51, 51, 0.5);
+}
+.list-duan li .info-item {
+    overflow: hidden;
+    min-height: 180px;
+    position: relative;
+}
+.list-duan .info-item a {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 20px;
+    color: #00a769;
+    line-height: 100%;
+    margin-bottom: 10px;
+    display: block;
+}
+.list-duan .info-item .view-more {
+    text-transform: initial;
+    font-size: 13px;
+    position: absolute;
+    bottom: 0;
+    left: 15px;
+    margin-bottom: 0;
+}
+.list-duan .info-item a:hover {
+    text-decoration: underline;
+}
+.list-duan .info-item p {
+    line-height: 20px;
+}
+.list-duan .info-item .address-duan {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    line-height: 100%;
+}
+.list-duan .info-item .date-post {
+    margin-bottom: 6px;
+    color: #A4A4A4;
+    line-height: 100%;
+}
+.slider-duan .pic-intro {
+    margin-bottom: 0;
+    height: 500px;
+}
+.slider-duan {
+    margin-bottom: 10px;
+}
+.infor-investor {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.infor-investor .title-inves {
+    font-weight: 700;
+    font-size: 14px;
+    color: #00a769;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+.infor-investor .pic-intro {
+    margin-bottom: 0;
+    float: left;
+    width: 200px;
+    height: 150px;
+    border: 1px solid #00a769;
+    margin-right: 25px;
+}
+.menu-infor-project li {
+    float: left;
+    width: 20%;
+    border-right: 1px solid #DEDEDE;
+}
+.menu-infor-project a {
+    display: block;
+    line-height: 100%;
+    padding: 15px 0;
+    background: #F5F5F5;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: center;
+    border-left: 1px solid #fff;
+}
+.menu-infor-project a.active,
+.menu-infor-project a:hover {
+    background: #00a769;
+    color: #fff;
+}
+.menu-infor-project li:last-child a,
+.menu-infor-project li:last-child {
+    border-right: none;
+}
+.item-infor-project * {
+    font-size: 14px;
+    line-height: 23px;
+}
+.listing-post-by-project {
+    margin-top: 30px;
+}
+.title-list {
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 18px;
+    color: #00a769;
+    text-transform: uppercase;
+    border-bottom: 2px solid #00a769;
+    padding-bottom: 5px;
+}
+.title-list .view-more {
+    text-transform: capitalize;
+    font-size: 14px;
+    line-height: 25px;
+}
+.listing-post-by-project > ul > li {
+    width: 50%;
+}
+@media (min-width: 320px) and (max-width: 500px) {
+    .list-duan li .pic-intro {
+        width: 100%;
+        height: 220px;
+        margin-bottom: 10px;
+    }
+    .list-duan li .info-item {
+        padding: 0;
+        overflow: inherit;
+        padding-bottom: 20px;
+    }
+    .list-duan .info-item .view-more {
+        left: inherit;
+        right: 0;
+    }
+    .du-an-hot .pic-intro {
+        height: 300px;
+    }
+}
+@media (min-width: 768px) {
+    .sidebar-col .list-item > li {
+        width: 50%;
+    }
+}
+@media (min-width: 992px) {
+    .sidebar-col .list-item > li {
+        width: 100%;
+    }
+}
+@media ( max-width: 768px ) {
+    .listing-post-by-project > ul > li {
+        width: 100%;
+    }
+    .slider-duan .pic-intro {
+        height: 300px;
+    }
+    .infor-investor li {
+        margin-bottom: 0;
+    }
+    .infor-investor .overflow-all strong {
+        display: block;
+        margin-bottom: 0;
+        width: 100%;
+    }
+    .infor-investor .pic-intro {
+        
+    }
+}
+@media ( max-width: 1024px ) {
+    .listing-post-by-project .id-duan {
+        float: none;
+        margin-bottom: 5px;
+    }
+    .listing-post-by-project .address {
+        margin-bottom: 2px;
+    }
+}
+@media (min-width: 320px) and (max-width: 500px) {
+    .infor-investor .overflow-all {
+        overflow: inherit;
+    }
+    .infor-investor .pic-intro {
+        float: none;
+        margin-bottom: 10px;
+    }
+    .infor-investor .overflow-all li {
+        font-size: 13px;
+    }
+    .infor-investor .overflow-all strong {
+        display: inline-block;
+        width: auto;
+        padding-right: 10px;
+    }
+    .menu-infor-project a {
+        font-size: 11px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    .title-list {
+        font-size: 14px;
+    }
+    .title-list .view-more {
+        font-size: 11px;
+        line-height: 20px;
+    }
+}
